@@ -1,0 +1,287 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    color: #636363;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1199px;
+}
+
+
+/* CSS button  */
+.btn-orange {
+    padding: 20px 35px;
+    font-size: 15px;
+    font-weight: 500;
+    background-size: 200%;
+    border: 1px solid transparent;
+    transition: all 0.5s;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.btn-orange:hover {
+    background-position: right center;
+}
+
+.btn-orange:hover i {
+    animation: toLeftFromRight 0.5s forwards;
+    display: inline-block;
+}
+
+/* Css BGcolor, text color */
+.bg_gradient {
+    background-image: linear-gradient(to right, #f55f8d 0, #f8ae56 51%, #f55f8d 100%);
+}
+
+.bg_red {
+    background-color: #f55f8d;
+}
+
+.txt_red {
+    color: #f55f8d;
+}
+
+/* CSS Title & Pagarap */
+.title h2 {
+    font-size: 70px;
+    line-height: 1.1;
+    font-weight: 800;
+    color: #262626;
+    margin-bottom: 20px;
+}
+
+.title h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #262626;
+    margin: 15px 0;
+}
+
+.title_light {
+    color: #fff;
+}
+
+.title span {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* CSS padding & margin Class */
+.space-inner {
+    padding-top: 115px;
+}
+
+/* CSS Header */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+}
+
+header .header_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .header_logo {
+    width: 35%;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+}
+
+
+header nav ul li {
+    display: inline-block;
+    padding: 55px 15px;
+}
+
+header nav ul li:hover a,
+#home,
+#home1,
+header nav ul li:hover i {
+    color: #F5608D;
+}
+
+
+header nav ul li a {
+    text-decoration: none;
+    color: #070120;
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+header nav ul li i {
+    font-size: 9px;
+    margin-top: -3px;
+    vertical-align: middle;
+}
+
+/* CSS banner */
+
+.banner {
+    padding-top: 180px;
+    overflow: hidden;
+    background-image: url(../img/pic2.png);
+    background-position: top;
+    background-size: 100%;
+}
+
+.banner .banner_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner .banner_title ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+
+.banner .banner_title {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner .banner_img {
+    width: 40%;
+}
+
+.banner .banner_title ul li {
+    padding: 10px 5px 10px 0;
+    font-size: 20px;
+}
+
+.banner .banner_title ul li i {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    border-radius: 35px;
+    font-weight: 900;
+    background-size: 200%;
+    margin-right: 10px;
+}
+
+.banner .banner_title p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* CSS service */
+
+.service .service_title {
+    text-align: center;
+}
+
+.service .service_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.service .service_item {
+    border-radius: 0.5rem;
+    background: #fff;
+    box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.1);
+    padding: 30px 45px;
+    transform: translateY(0);
+    transition: all 0.5s;
+    border-image: 100 round;
+    border: 3px solid transparent;
+    text-align: center;
+
+}
+
+.service .service_item:hover {
+    transform: translateY(-20px);
+    border-image: url(../img/br.png) 1 round;
+}
+
+.service .img_container img {
+    width: 215px;
+}
+
+
+/* Css Contact */
+
+.contact {
+    background-image: url(../img/bg15.png);
+    background-size: 100%;
+    background-position: center right;
+    background-repeat: no-repeat;
+    padding-bottom: 85px;
+    overflow: hidden;
+}
+
+.contact .contact_content {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    align-items: center;
+}
+
+.contact .contact_left {
+    width: 60%;
+    position: absolute;
+    left: -17%;
+}
+
+.contact .contact_right {
+    width: 50%;
+}
+
+.contact .contact_left img {
+    width: 100%;
+    border-radius: 0 100px 100px 0;
+}
+
+.contact .contact_right ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.contact .contact_right ul li {
+    padding: 5px 0;
+}
+
+.contact .contact_right ul li i {
+    font-size: 24px;
+    color: #f55f8d;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.contact .title p {
+    margin-bottom: 15px;
+}

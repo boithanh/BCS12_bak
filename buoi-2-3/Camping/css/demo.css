@@ -1,0 +1,23 @@
+.demo{
+background-color: red;
+color: white;
+}
+
+#dacbiet{
+    background-color: violet;
+    color: white;
+    } 
+
+     /* Độ ưu tiên:
+    id: 100
+    class: 10
+    element: 1 */
+
+div p{
+    background-color: black;
+        color: white;
+    }
+
+    p{
+        color: red;
+    }

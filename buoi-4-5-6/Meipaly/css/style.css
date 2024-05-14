@@ -1,0 +1,293 @@
+/* reset CSS */
+* {
+  padding: 0;
+  margin: 0;
+  /* Fix chỗ Float ko bị bể nội dung, nếu ko có sử dụng Float thì khỏi sử dụng cũng được */
+  box-sizing: border-box;
+  /* Khai báo font toàn trang */
+  font-family: "Oswald", sans-serif;
+}
+
+/* .demo5{
+    background-color: black;
+    width: 200px;
+} */
+
+.flex_container {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  /* Thuoc tính điều chỉnh các phần tử dựa trên trục chính */
+  /* Khi sử dụng Flex sẽ có 2 trục là trục chính (mặc định ban đầu là trục ngang) với trục phụ ( mặc định ban đầu là trục dọc*/
+
+  /* Thuộc tính điều chỉnh các phần tử theo trục chính */
+  /* justify-content: center */
+  /* justify-content: space-beetween */
+  /* justify-content: flex-end */
+  /* justify-content: space-evenly */
+  /* justify-content: space-arround */
+
+  /* Thuộc tính điều chỉnh các phần tử theo trục dọc */
+  /* align-item: center */
+  /* align-item: flex-end */
+  /* align-item: flex-start */
+
+  /* Thay đổi trục chính flex box */
+  /* Flex-direction: row-reverse */
+  /* Đổi trục chính là trục ngang sang trục dọc: Flex-direction: column - đi từ trên xuống dưới */
+  /* Flex-direction: column-reverse : Đi theo chiều từ dưới lên trên*/
+}
+
+/* .flex_item1{
+    height: 200px;
+    width: 200px;
+    background-color: red;
+}
+
+.flex_item2{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+}    */
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+header .header_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .header_content nav ul li {
+  display: inline-block;
+  margin-right: 25px;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+header {
+  padding: 20px 0;
+  background-color: black;
+  /* Có thể để giá trị position: fixed để cho header dính trên trình duyệt. Tính năng mới có: Posstion: Sticky kéo theo side bar đi theo menu */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  /* Thay đổi cấu trúc truyền vào của possion của các phần tử, khi chưa có z-index thì tạo trc sẽ nằm dưới, tạo sau nawfmg trên.Khi có z-index thì phần tử đó sẽ đưuọc ưu tiên đầu tiên nắm trên các phần tử còn lại */
+  /* Bắt buộc truyền position vào, nếu ko trình duyệt auto truyền thuộc tính: position: static cho phần tử đó (thuộc tính này méo có giá trị gì --> z-index vô hiệu) */
+  z-index: 999999;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+}
+header .header_content a {
+  text-decoration: none;
+  color: white;
+  /* làm chậm hiệu ứng. Chữ all có các thuộc tính như color hoặc các thuộc tính riêng biệt.  */
+  transition: all 0.5s;
+}
+
+header .header_logo {
+  font-size: 32px;
+}
+
+header nav ul li .active {
+  color: #e62b4a;
+}
+
+header nav li a:hover {
+  color: #e62b4a;
+}
+
+.banner {
+  background-image: url(../img/home_slider.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+.banner h1 {
+  font-size: 75px;
+  /* Thường LineHeight sẽ setup lớn hơn Font-Size để tránh chữ dính ( >khoảng 15px)*/
+  line-height: 85px;
+}
+.banner button {
+  background-color: #e62b4a;
+  padding: 10px 30px;
+  /* border-style: none; */
+  color: white;
+  text-transform: uppercase;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  border: 2px solid #e62b4a;
+}
+.banner button:hover {
+  background-color: #af2239;
+  transition: all 0.5s;
+}
+.banner i {
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.banner .banner_subtitle {
+  font-size: 25px;
+}
+
+.service {
+  background-color: black;
+  color: white;
+  padding: 20px 0;
+}
+
+.service .item_bg {
+  background: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 250px;
+  /* Truyền thêm giá trị này để tạo khối dưới class iTem_bg */
+  position: relative;
+}
+.service .service_item {
+  padding: 0 15px;
+}
+
+.service .slick-dots li button:before {
+  font-size: 15px;
+}
+
+.service .slick-dots li.slick-active button:before {
+  color: #e62b4a;
+}
+
+.service .service_item .item_bg:before {
+  /* Tạo khối đường viền */
+  position: absolute;
+  content: "";
+  /* căn chỉnh vị trí của đường viền*/
+  top: 0;
+  right: 0;
+  height: 0;
+  width: 5px;
+  background-color: red;
+}
+
+.service .service_item .item_bg:hover::before {
+  height: 100%;
+  transition: all 0.5s;
+}
+
+.service .slick-dots li button::before {
+color: white;
+font-size: 15px;
+opacity: 1;
+}
+
+/* CSS Blog */
+.blog .blog_content{
+  /* Ở bài này có thể sử dụng Flex hoặc grid đều có thể giải quyết được */
+  display: grid;
+
+  /* Dùng khi set cứng các ô  */
+  /* grid-template-columns: 200px 200px 200px 200px; */
+
+  /* Dùng khi cho trình duyệt tự động tính phần tử con, mỗi pt con chiếm 100% cột đó */
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+
+  /* Có thể viết như cách này nếu layout quá nhiều ô để hạn chế viết  quá nhiều */
+  grid-template-columns: repeat(4, 1fr);
+
+  /* Có thể kết hợp reapeat để chia các layout phức tạp */
+  /* grid-template-columns: 1fr 2fr repeat(4, 1fr); */
+
+  /* Giao diện grid hỗ trợ chia khoảng cách giữa các phần tử, ko cần dùng padding */
+gap: 30px;
+
+}
+
+.blog .blog_content .blog_item img{
+width: 100%;
+height: 100%;
+/* Nếu tăng width và height hình sẽ bị kéo dài ra nên cần 1 thuộc tính khác để điều chỉnh hình sao cho vùa theo chiều dài và rộng ô, thường là sẽ zoom vào giữa */
+object-fit: cover;
+
+/* Thuộc tính điều chỉnh độ tương phản, độ rõ hoặc mờ cho ảnh như chúng ta chỉnh ảnh bên design (ko phải opacity vì nó sẽ làm mờ luôn bức hình)    */
+filter: grayscale(0.5) contrast(0.5);
+}
+
+/* Có thể sử dụng padding hoặc gap để tạo khoảng trắng giữa các hình */
+/* .blog .blog_content .blog_item {
+  padding: 10px;
+} */
+
+/* Lấy ra phần tử đầu tiên */
+.blog .blog_item:first-child{
+  /* Số 2 ở đây là số lượng ô cần hợp nhất, số 1 biểu thị sự hợp nhất từ cột nào */
+ grid-column: 1 / span 2; 
+ grid-row: 1 / span 2;
+} 
+/* Lấy ra phần tử cuối cùng */
+.blog .blog_item:last-child{
+
+  grid-column: 3 / span 2; 
+  grid-row: 3 / span 2;
+ } 
+ /* Lấy ra phần tử được chỉ định */
+ /* .blog .blog_item:nth-child(3){
+  border: 3px solid red;
+ }  */
+
+ /* .blog .overlay{
+  position: absolute;
+  top:0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+background-color: #e62b4a;
+ } */
+
+
+ .blog .blog_item{
+  position: relative;
+
+ }
+
+ .blog .blog_item .overlay{
+  position: absolute;
+  background-color: #CD5C6C;
+  opacity: 30%;
+  top:0;
+  left: 0;
+  /* Có thể sử dụng rightL:0 và bottom: 0 để dàn backgroud ra full  thay vì width và height*/
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+  /* Dùng flex để dàn nội dung bên trong để hạn chế sử dụng thêm position cho layout. Vì khi sd qua nhiều sẽ điều chỉnh nhiều ở mobile để responsive */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+ }
+
+ .blog .blog_item .overlay .overlay_icon{
+  text-align: right;
+ }
+
+ .blog .blog_item .overlay .overlay_icon i{
+background-color: white;
+padding: 15px;
+}
+

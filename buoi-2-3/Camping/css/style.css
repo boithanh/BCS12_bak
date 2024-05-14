@@ -1,0 +1,312 @@
+/* Khi đi làm đây gọi là bước Reset CSS.
+Luôn có bước reset CSS trước khi viết CSS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* Khi đi làm đây gọi là bước Reset CSS */
+
+.header {
+  background-color: #f8e1db;
+  padding: 15px 40px;
+}
+
+/* Để dễ maintain code sau này, khi viết Selector CSS nên viết theo kiểu quan hệ cha con như thế này. Class cha là class bao gồm tất cả thẻ con của cụm đó */
+.header .header_logo {
+  margin-bottom: 25px;
+
+  /* Thay đổi định dạng thẻ */
+  display: inline-block;
+}
+
+/* thuộc tính thay đổi các dấu trước thẻ ul-li */
+.header ul {
+  list-style: none;
+}
+
+.header ul li {
+  display: inline-block;
+  /* có thể xài padding và Margin nhưng padding có tác động đến vùng xung quanh của menu (làm tăng vùng click) còn margin nằm bên ngoài phần tử HTML nên không làm tác động --> Nên dùng magrin đầu tiên khi làm button hoặc menu */
+  margin-right: 15px;
+}
+.header ul li a {
+  /* Khi điều chỉnh màu chữ cho thẻ a, cần gọi selector tới thẻ a để điều chỉnh, thẻ a tự có màu từ trình duyệt nên ko nhận giá trị màu từ the cha */
+  color: black;
+  /* Điều chỉnh cho kiểu chữ có các loại  */
+  text-decoration: none;
+}
+
+/* .carousel img{
+        height: 500px;
+        width: 100%;
+        object-fit: center;
+    } */
+
+/* carousel CSS */
+.carousel {
+  background-image: url(../img/BG.png);
+  height: 100vh;
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.activities {
+  padding: 80px 0;
+  background-color: #faf4f2;
+  text-align: center;
+  /* margin: 10px 0; */
+}
+
+.activities .acti_item {
+  float: left;
+  /* Khi viết phép trừ lưu ý trường hợp viết dấu trừ kế bên số thì nhớ cách ra vì trình duyệt sẽ tưởng số âm */
+  width: calc(100% / 4);
+  /* background-color: black; */
+  padding: 10px 20px;
+}
+
+.activities .acti_content {
+  padding: 20px 0;
+}
+
+.activities .acti_item_bg {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  /* position: relative; */
+}
+
+.activities .item_img {
+  position: relative;
+}
+
+.activities .acti_item_bg img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.activities .acti_item_bg h3 {
+  margin: 15px 0;
+}
+
+.activities .acti_item_bg button {
+  /* Điều chỉnh định dạng nội dung là In hoa, In hoa chữ cái đầu hay viết thường  */
+  text-transform: capitalize;
+  padding: 15px 40px;
+  /* Dộ dày - Kiểu - màu
+    border: 10px solid red; */
+  border: none;
+  /* Ngoài ra còn các thuộc tính để điều chỉnh custom bo tròn như border-radius-top-left v.v */
+  border-radius: 20px;
+  margin: 15px 0;
+  color: #7D7D7D;
+}
+
+.activities .acti_item_bg p {
+  margin: 15px 0;
+  line-height: 30px;
+}
+
+.activities .clear {
+  clear: both;
+}
+
+.activities .acti_item_bg i {
+  /* Font awsome cũng là nội dung nên có thể điều chỉnh màu và kích thước */
+  color: red;
+  font-size: 15px;
+  /* 
+    position: relative;
+    right: 40px; */
+
+  /* Dựa vào thẻ cha là Position: relative để di chuyển bên trong để cho kích thước di chuyển thu nhỏ lại */
+  /* Lưu ý: Luôn luôn phải có một thẻ cha là  thuộc tính position với giá trị relative để cố định vùng di chuyển */
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  /* cách 1 về việc tạo nèn cho một icon */
+  /* padding: 16px; */
+  /* cách 2 về việc tạo nèn cho một icon */
+  width: 40px;
+  height: 40px;
+  /* Thuộc tính line-height giúp điều chỉnh chiều cao nội dung của dong trong HTML */
+  line-height: 40px;
+  background-color: white;
+  opacity: 0.5;
+  border-radius: 15px;
+}
+
+/*  Chiều dài của 1 thẻ HTML (width) = chiều dài nội dung */
+/* 25% + 20px +20px - Đây là trường hợp dùng Float mà ko có Box-sizing: border-box. Khi có pading và mrin có 1 phần tử sẽ chạy xuống dưới*/
+/* chiều dài của một thẻ HTML (width) = đường viền (bodder) +pading + chiều dài nội dung */
+/* 25% = 20px + 20PX + chiều dài nội dung - Đây là trường hợp dùng Float mà ko có Box-sizing: border-box.*/
+
+.activities .acti_button button {
+  background-color: transparent;
+  text-transform: capitalize;
+  padding: 12px 70px;
+  border: 1px solid #e76f51;
+  color: #e76f51;
+  border-radius: 50px;
+}
+.activities .acti_button {
+  margin: 15px 0;
+}
+
+/* contact CSS */
+
+.contact {
+  background-color: #ffd4c9;
+}
+.contact .contact_img {
+  background-image: url(../img/homeicon.png);
+  height: 300px;
+  background-repeat: no-repeat;
+  margin: 20px 20px;
+}
+
+.contact #mask {
+  background-image: url(../img/mask.png);
+  background-size: contain;
+  width: 100%;
+  padding: 20px 20px;
+  /* background-position: center; */
+}
+
+.contact .contact_item {
+  float: left;
+  width: calc(100% / 2);
+}
+
+.contact .contact_item_download {
+  float: left;
+  width: calc(100% / 2);
+}
+
+.contact .contact_content {
+  padding: 80px 0;
+  color: #8d8d8d;
+  text-align: left;
+}
+.contact .contact_content i {
+  margin: 5px 2px;
+  color: #e76f51;
+}
+
+.contact .contact_content h2 {
+  padding: 8px 0;
+}
+
+.contact .contact_content p {
+  padding: 8px 0;
+}
+
+.contact .contact_content h3 {
+  padding: 8px 0;
+}
+
+.contact .contact_panel img {
+  width: 40%;
+  /* height:auto; */
+}
+
+.contact .clear {
+  clear: both;
+}
+
+
+
+
+
+
+
+/* Footer Css */
+.footer{
+  color: black;
+}
+
+
+.footer .footer_content{
+  background-color: #F8E1DB;
+  padding: 60px 50px;
+  border-top-left-radius: 130px;
+  border-top-right-radius: 130px;
+}
+
+
+
+.footer .footer_bg{
+  padding-top: 100px;
+}
+
+.footer .footer_item_23{
+  float: left;
+  width:calc(100%/2);
+  padding: 20px 20px;
+}
+
+.footer .footer_item_23 h3{
+  padding: 20px 0;
+}
+
+.footer .footer_item_23 p{
+  line-height: 30px;
+  }
+
+.footer .footer_item{
+  float: left;
+  width:calc(100%/3);
+  /* padding: 20px 20px; */
+}
+
+.footer .resert{
+  text-align: center;
+  background-color: #F8E1DB;
+  padding-bottom: 30px;
+  color: black;
+}
+
+.footer .footer_item ul{
+ list-style: none;
+}
+
+
+.footer .footer_item ul li a{
+  text-decoration: none;
+  color: black;
+  line-height: 30px;
+ }
+
+.footer .clear{
+  clear: both;
+}
+
+
+/* Đây là phần code demo học về css */
+.demo {
+  background-color: black;
+}
+.demo1 {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+
+  /* Magrin là tạo khoảng cách ở bên ngoài phần tử HTML */
+  /* magrin nhận vào các giá trị sau */
+  /* 1: giá trị diều chỉnh 4 hướng */
+  /* 2: Giá trị điều chỉnh theo trục dọc và ngang, giá trị điều chỉnh trục dọc */
+  /* 3 và 4: Là giá trị điều chỉnh theo chiều kim đồng hồ bắt đầu từ top */
+  margin: 40px 50px;
+
+  /* khác với margin, padding là phần khoảng cách giữa nội dung và đường viền --> padding sẽ đẩy ở bên trong the HTML 
+     cấu trúc các giá trị tương đồng margin */
+  padding: 100px;
+}
+.demo2 {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+}
