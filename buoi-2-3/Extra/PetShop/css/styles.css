@@ -409,6 +409,7 @@ border-radius: 50px;
 /* Number Css */
 .number {
   padding: 90px 0 20px;
+  background-image: linear-gradient(90deg, rgba(217, 145, 145, 1) 17%, rgba(191, 117, 123, 1) 23%, rgba(166, 99, 99, 1) 34%, rgba(140, 66, 72, 1) 46%, rgba(140, 66, 72, 1) 64%, rgba(140, 66, 72, 1) 75%, rgba(191, 117, 123, 1) 90%, rgba(191, 117, 123, 1) 94%);
 }
 
 .number .number_content p {
