@@ -1,0 +1,61 @@
+header .collapse .nav-link::before {
+    color: green !important;
+}
+
+header .collapse .nav-link::before {
+    /* contain: ""; */
+    content: "";
+    position: absolute;
+    width: 0;
+    background-color: green;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    transition: all 1s;
+}
+
+header .collapse .nav-link:hover::before {
+    width: 100%;
+}
+
+.cyber_carousel .carousel-item .carousel_content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.cyber_carousel .carousel-item .carousel_content {
+    top: 0;
+    left: 0;
+    background-color: red;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.cyber_carousel .carousel-item::before {
+    position: absolute;
+    right: 15%;
+    bottom: 20px;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+/* Dufng before affter sẽ phải tạo ra 2 selector để ql nhiều bước hơn khi dùng top 0,left 0 width heigh: 100% */
+
+/* Cyber_project */
+.cyber_project .nav button.active {
+    background-color: green !important;
+    color: white !important;
+    border-color: green !important;
+}
+
+.cyber_project .col-4 p {
+    padding: 30px;
+    background-color: red;
+}
