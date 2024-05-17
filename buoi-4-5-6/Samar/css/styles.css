@@ -6,7 +6,7 @@
     font-family: "Roboto", sans-serif;
 }
 
-body{
+body {
     color: #636363;
     font-weight: 400;
     line-height: 1.6;
@@ -344,7 +344,7 @@ header nav ul li i {
 }
 
 .feature .feature_left,
-.feature .feature_right{
+.feature .feature_right {
     width: 50%;
 }
 
@@ -385,8 +385,7 @@ header nav ul li i {
     transition: all 1s;
 }
 
-.feature .feature_item:nth-of-type(2)
-{
+.feature .feature_item:nth-child {
     padding: 0 0 30px 50px;
 }
 
@@ -402,7 +401,7 @@ header nav ul li i {
     transition: all 1s;
 }
 
-.feature .feature_item h3{
+.feature .feature_item h3 {
     font-weight: 800;
     color: #262626;
     font-size: 1.5rem;
@@ -410,7 +409,7 @@ header nav ul li i {
     margin: 0;
 }
 
-.feature .feature_item div{
+.feature .feature_item div {
     padding-left: 25px;
     z-index: 1;
     transition: all 1s;
@@ -419,8 +418,7 @@ header nav ul li i {
 .feature .feature_bg:hover i,
 .feature .feature_bg:hover h3,
 .feature .feature_bg:hover p,
-.feature .feature_bg:hover div
-{
+.feature .feature_bg:hover div {
     color: #fff;
 }
 
@@ -470,4 +468,80 @@ header nav ul li i {
     51% {
         opacity: 1;
     }
+}
+
+
+/* Css Portfolio */
+
+.portfolio {
+    background- image: url(../img/bg17.png);
+    background-size: cover;
+    background-position: top center;
+    overflow: hidden;
+}
+
+.portfolio .title {
+    text-align: center;
+}
+
+.portfolio .portfolio_item img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+
+.portfolio .portfolio_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    gap: 40px;
+    /* grid-template-rows: 1.5fr 0.5fr 0.75fr; */
+}
+
+.portfolio .portfolio_item:first-child {
+    grid-column: 1 / span 2;
+}
+
+.portfolio .portfolio_item:nth-child(5) {
+    grid-column: 1 / span 2;
+}
+
+
+.portfolio .portfolio_item:last-child {
+    grid-column: 3 / 4;
+    grid-row: 2 / 4;
+}
+
+.portfolio .portfolio_item {
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.portfolio .portfolio_item .overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.portfolio .overlay .overlay_icon {
+    font-size: 28px;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background: linear-gradient(to right, #f55f8d 0, #f8ae56 51%, #f55f8d 100%);
+    background-size: 200%;
+    border-radius: 10px;
+    transition: all 0.75s;
+}
+
+.portfolio .overlay .overlay_icon a i {
+    text-align: right;
 }

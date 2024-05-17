@@ -14,16 +14,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- External CSS  -->
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
     <header class="position-absolute top-0 start-0" style="z-index:9999; width:100%">
-        <nav class="navbar navbar-expand-lg bg-danger">
+        <nav class="navbar navbar-expand-lg navbar-dark py-3">
             <div class="container">
-                <i class="fa fa-dice-d20 text-success"></i><a class="navbar-brand text-white "
-                    href="#">CyberPortfolio</a>
+                <a class="navbar-brand text-white" href="#">
+                    <i class="fa fa-dice-d20 text-success"></i>
+                    <span>CyberPortfolio</span>
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -48,7 +52,7 @@
             </div>
         </nav>
     </header>
-    <!-- <section class="cyber_carousel">
+    <section class="cyber_carousel">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -62,31 +66,36 @@
                 <div class="carousel-item vh-100 active">
                     <img src="./image/finland.jpg" class="d-block w-100" alt="...">
                     <div class="carousel_content">
-                        <img src="./image/01-3.jpg" alt="">
-                        <h1>Our goals. Our mission.</h1>
-                        <p>How we help other companies to grow.</p>
+                        <img class="animate__animated animate__fadeInUp animate__slow" src="./image/01-3.jpg" alt="">
+                        <h1 class="animate__animated animate__fadeInUp animate__slow">Our goals. Our
+                            mission.</h1>
+                        <p class="animate__animated animate__fadeInUp animate__slow">How we help other
+                            companies to grow.</p>
                     </div>
                 </div>
                 <div class="carousel-item vh-100">
                     <img src="./image/mountains.jpg" class="d-block w-100" alt="...">
                     <div class="carousel_content">
-                        <img src="./image/02-3.jpg" alt="">
-                        <h1>Our goals. Our mission.
-                        </h1>
-                        <p>How we help other companies to grow.</p>
+                        <img class="animate__animated animate__fadeInUp animate__slow" src="./image/02-3.jpg" alt="">
+                        <h1 class="animate__animated animate__fadeInUp animate__slow">Our goals. Our
+                            mission.</h1>
+                        <p class="animate__animated animate__fadeInUp animate__slow">How we help other
+                            companies to grow.</p>
                     </div>
                 </div>
                 <div class="carousel-item vh-100">
                     <img src="./image/mountains-1.jpg" class="d-block w-100" alt="...">
                     <div class="carousel_content">
-                        <img src="./image/03-3.jpg" alt="">
-                        <h1></h1>
-                        <p></p>
+                        <img class="animate__animated animate__fadeInUp animate__slow" src="./image/03-3.jpg" alt="">
+                        <h1 class="animate__animated animate__fadeInUp animate__slow">Our goals. Our
+                            mission.</h1>
+                        <p class="animate__animated animate__fadeInUp animate__slow">How we help other
+                            companies to grow.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
     <section class="cyber_project py-5">
         <div class="container">
             <div class="cyber_project_title">
@@ -117,25 +126,142 @@
                 <div class="tab-content" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                         aria-labelledby="pills-home-tab" tabindex="0">
-                        <div class="row">
+                        <div class="row gy-4">
                             <!-- Item -->
                             <div class="col-4">
-                                <p>lorem</p>
+                                <div class="project_item animate__animated animate__zoomIn">
+                                    <img src="./image/g1.jpg" alt="G1">
+                                    <div class="project_item_text">
+                                        <h5>Apologetic robot holding flowers</h5>
+                                        <p>Branding</p>
+                                    </div>
+                                </div>
                             </div>
+                            <!-- Item -->
                             <div class="col-4">
-                                <p>lorem</p>
+                                <div class="project_item animate__animated animate__zoomIn">
+                                    <img src="./image/g2.jpg" alt="G1">
+                                    <div class="project_item_text">
+                                        <h5>Woman walking her small dog</h5>
+                                        <p>Illustrations</p>
+                                    </div>
+                                </div>
                             </div>
+                            <!-- Item -->
                             <div class="col-4">
-                                <p>lorem</p>
+                                <div class="project_item animate__animated animate__zoomIn">
+                                    <img src="./image/g3.jpg" alt="G1">
+                                    <div class="project_item_text">
+                                        <h5>Oil bottle branding</h5>
+                                        <p>Branding</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item -->
+                            <div class="col-4">
+                                <div class="project_item animate__animated animate__zoomIn">
+                                    <img src="./image/g4.jpg" alt="G1">
+                                    <div class="project_item_text">
+                                        <h5>Smiling Woman</h5>
+                                        <p>Illustrations</p>
+                                    </div>
+                                </div>
+                            </div> <!-- Item -->
+                            <div class="col-4">
+                                <div class="project_item animate__animated animate__zoomIn">
+                                    <img src="./image/g5.jpg" alt="G1">
+                                    <div class="project_item_text">
+                                        <h5>Drink can design</h5>
+                                        <p>Packaging</p>
+                                    </div>
+                                </div>
+                            </div> <!-- Item -->
+                            <div class="col-4">
+                                <div class="project_item animate__animated animate__zoomIn">
+                                    <img src="./image/g6.jpg" alt="G1">
+                                    <div class="project_item_text">
+                                        <h5>I love you hand gesture</h5>
+                                        <p>Illustrations</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
-                        tabindex="0">...</div>
+                        tabindex="0">
+                        <div class="row gy-4">
+                            <!-- Item -->
+                            <div class="col-4">
+                                <div class="project_item animate__animated animate__zoomIn">
+                                    <img src="./image/g1.jpg" alt="G1">
+                                    <div class="project_item_text">
+                                        <h5>Apologetic robot holding flowers</h5>
+                                        <p>Branding</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item -->
+                            <div class="col-4">
+                                <div class="project_item animate__animated animate__zoomIn">
+                                    <img src="./image/g2.jpg" alt="G1">
+                                    <div class="project_item_text">
+                                        <h5>Woman walking her small dog</h5>
+                                        <p>Illustrations</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item -->
+                            <div class="col-4">
+                                <div class="project_item animate__animated animate__zoomIn">
+                                    <img src="./image/g3.jpg" alt="G1">
+                                    <div class="project_item_text">
+                                        <h5>Oil bottle branding</h5>
+                                        <p>Branding</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
-                        tabindex="0">...</div>
+                        tabindex="0">
+                        <div class="row gy-4">
+                            <!-- Item -->
+                            <div class="col-4">
+                                <div class="project_item animate__animated animate__zoomIn">
+                                    <img src="./image/g3.jpg" alt="G1">
+                                    <div class="project_item_text">
+                                        <h5>Oil bottle branding</h5>
+                                        <p>Branding</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item -->
+                            <div class="col-4">
+                                <div class="project_item animate__animated animate__zoomIn">
+                                    <img src="./image/g4.jpg" alt="G1">
+                                    <div class="project_item_text">
+                                        <h5>Smiling Woman</h5>
+                                        <p>Illustrations</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab"
-                        tabindex="0">...</div>
+                        tabindex="0">
+                        <div class="row gy-4">
+                            <!-- Item -->
+                            <div class="col-4">
+                                <div class="project_item animate__animated animate__zoomIn">
+                                    <img src="./image/g6.jpg" alt="G1">
+                                    <div class="project_item_text">
+                                        <h5>I love you hand gesture</h5>
+                                        <p>Illustrations</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
