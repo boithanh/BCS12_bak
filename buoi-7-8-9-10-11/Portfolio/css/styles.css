@@ -112,3 +112,92 @@ header .navbar-brand {
 .cyber_project .project_item p {
     color: #585858;
 }
+
+.back_to_top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: red;
+    color: white;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+
+
+.cd-top--is-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.cd-top--fade-out {
+    opacity: .5;
+}
+
+/* available  */
+.cyber_available {
+    color: white;
+    background-image: url(../image/3.jpg);
+    padding: 80px 0;
+    position: relative;
+    text-align: center;
+}
+
+.cyber_available::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(7, 10, 12, 0.72);
+}
+
+.cyber_available .cyber_avai_item {
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(3.5px);
+    -webkit-backdrop-filter: blur(3.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: all 0.5s;
+}
+
+.cyber_available .cyber_avai_item:hover {
+    border-color: white;
+    background-color: black;
+}
+
+/* Responsive web: Laptop first (max-width)  */
+
+/* Luưu ý khi sử dụng responsive với max-width ,luôn luôn điều chỉnh có các màn hình từ lớn xuống nhỏ */
+
+/* @media screen and (max-width: 1200px) {
+    header .navbar-brand span {
+        color: yellow;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    header .navbar-brand span {
+        color: orange;
+    }
+} */
+
+
+/* Vùng lấy của min-width từ điểm chọn đến dương vô cực để bắt responsive trên các thiết bị mobile */
+@media screen and (min-width: 820px) {
+    header .navbar-brand span {
+        color: green;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .cyber_project .cyber_avai_item {
+        padding: 10px 0;
+    }
+}
