@@ -2,31 +2,60 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>TestCode</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="">
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 
+
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         .item {
-            background-color: red;
-            width: 200px;
-            height: 200px;
+            background-color: green;
+            border: 1px solid black;
+            gap: 30px;
         }
 
         .item:first-child {
-            grid-column: 1 / 6;
-            grid-row: 5 / 6;
+            grid-column: 1 / span 2;
+            /* Tương tự Có thể ghi là: 1 / 3 (Start: đường kẻ dọc 1 --> End: đường kẻ dọc 3) */
+
+        }
+
+        .item:nth-child(5) {
+            grid-column: 1 / span 2;
+
+        }
+
+
+        .item:last-child {
+            grid-column: 3 / 4;
+            grid-row: 2 / 4;
         }
 
         .content {
             display: grid;
-            grid-template-columns: 20% 20% 20% 20% 20%;
-            grid-template-rows: 12.5px 12.5px 12.5px 12.5px 12.5px;
+            grid-template-columns: repeat(2, 1fr) 1.5fr;
+            grid-template-rows: 1.5fr 1fr 1.5fr;
+        }
+
+        @media screen and (max-width: 500px) {
+
+            .content .item {
+                display: block;
+                height: 100%;
+            }
+
         }
     </style>
 </head>
@@ -39,11 +68,46 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="content">
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
+                    <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus praesentium, ex
+                        repellendus, consequatur ratione distinctio debitis illum modi rerum quia id suscipit rem ullam
+                        accusantium facere eum in cupiditate? Ex placeat ut error debitis nihil excepturi sint dicta
+                        ratione earum obcaecati voluptas iste velit aliquid, magni nemo optio sunt odit. Molestiae,
+                        nostrum enim? Libero, ad magnam enim recusandae quis repudiandae pariatur ut voluptate,
+                        consequatur et nemo excepturi? Voluptatum quasi recusandae nulla, temporibus harum nesciunt sint
+                        eius fugiat sed. Voluptates laboriosam maxime magni quae sed, dolores, ducimus, molestias
+                        doloribus obcaecati consequatur ea unde officiis perferendis voluptas dolorem eum hic placeat
+                        soluta.</div>
+                    <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, neque quas.
+                        Perspiciatis numquam itaque autem eveniet modi consequuntur nobis quibusdam rem debitis
+                        delectus. Officia voluptatum ad perferendis dicta quis molestias!</div>
+                    <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ex,
+                        laboriosam perferendis eum aut necessitatibus.</div>
+                    <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. At consequatur dolore
+                        nobis architecto molestiae ipsum velit dolores quia.</div>
+                    <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis eum maxime
+                        aspernatur itaque, sint illo id vitae praesentium veniam sit quidem error provident culpa, sed
+                        cum officia optio modi nemo iusto delectus cupiditate. Consequuntur quis repudiandae natus ipsa
+                        molestiae. Quisquam inventore eius laborum laboriosam quo? Vitae, aut illum aperiam molestiae
+                        fugiat quae itaque obcaecati doloribus, eos accusamus inventore quidem, distinctio earum et
+                        suscipit fugit officiis dolorem consequatur consectetur perspiciatis! Soluta, officia. Dolorum
+                        iusto distinctio voluptas ipsum iste!</div>
+                    <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde nobis, sit
+                        accusantium consequatur, quidem perferendis, facere nostrum suscipit magni quia obcaecati
+                        dolores dolor. Non quod aliquid itaque odio corrupti saepe sequi, beatae nulla incidunt
+                        perferendis voluptatibus? Voluptas sint culpa pariatur dolorum, temporibus aspernatur libero
+                        suscipit ullam laudantium quam reprehenderit repudiandae, a beatae! Adipisci labore quisquam
+                        laborum sunt porro consequuntur accusamus, qui quas excepturi voluptate doloremque tempore
+                        beatae est itaque consequatur odio exercitationem deserunt quibusdam voluptates, impedit culpa!
+                        Quod magnam aspernatur corporis qui. Eligendi, vitae voluptate voluptatum consequatur harum a,
+                        facilis dolores eaque beatae nobis dignissimos ducimus ad sapiente? Ullam, laborum! Libero nobis
+                        dignissimos quasi dolorem quibusdam officiis quo magni non pariatur eius esse doloribus cum modi
+                        neque accusantium sapiente consequuntur rem molestias dolores, iure iste quis vitae quas
+                        aperiam. Distinctio, dignissimos quo reiciendis, consectetur nam delectus omnis recusandae
+                        veritatis, eum numquam quis qui tenetur! Ipsam enim soluta dolorem quod molestiae ipsa odit.
+                        Quos, molestiae nam. Molestias asperiores consequuntur vitae reiciendis. Et iure dolor
+                        distinctio quidem. A eaque nemo distinctio. Illo ducimus nostrum quo autem minima. Officiis
+                        eius, tempora eveniet sed quas omnis laboriosam molestiae ad cumque ut nostrum aliquid illum
+                        atque exercitationem ducimus, quisquam quo accusantium. Veritatis eligendi nam aut!</div>
                 </div>
             </div>
         </div>
