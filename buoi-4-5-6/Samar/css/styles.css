@@ -85,6 +85,10 @@ body {
     padding-top: 115px;
 }
 
+.space-after {
+    padding-bottom: 50px;
+}
+
 /* CSS Header */
 header {
     position: absolute;
@@ -109,30 +113,40 @@ header nav {
     justify-content: space-between;
     align-items: center;
     width: 65%;
+    overflow: hidden;
 }
 
 
 header nav ul li {
     display: inline-block;
-    padding: 55px 15px;
-}
+    padding: 55px 12px;
+    list-style: none;
 
-header nav ul li:hover a,
-#home,
-#home1,
-header nav ul li:hover i {
-    color: #F5608D;
 }
-
 
 header nav ul li a {
+    display: inline-block;
     text-decoration: none;
     color: #070120;
     text-transform: capitalize;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 599;
+    vertical-align: middle;
     transition: all 0.5s;
 }
+
+
+header nav ul li:hover a {
+    color: #F5608D;
+    animation: baytutrenxuong 0.25s forwards;
+}
+
+header nav ul li:hover i {
+    animation: 0s;
+}
+
+
+
 
 header nav ul li i {
     font-size: 9px;
@@ -356,6 +370,10 @@ header nav ul li i {
     padding: 0 50px 30px 0;
 }
 
+.feature .feature_item:nth-child(2) {
+    padding-left: 50px;
+}
+
 .feature .feature_item .feature_bg {
     box-shadow: 0 0px 60px 0px rgb(0 0 0 / 10%);
     padding: 30px;
@@ -553,6 +571,15 @@ header nav ul li i {
 
 
 /* News CSS */
+
+.news {
+    background-position: top center;
+    background-image: url(../img/bg16.png);
+    background-size: cover;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
 .news .news_title {
     text-align: center;
 }
@@ -569,6 +596,7 @@ header nav ul li i {
 .news .news_bg {
     background-color: #FEEFF3;
     border-radius: 12px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 
 .news .news_img img {
@@ -619,10 +647,228 @@ header nav ul li i {
 }
 
 
+/* Css Footer */
+
+footer {
+    background-image: url(../img/bg4.png);
+    display: block;
+    height: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #0e1b1f;
+    background-size: contain;
+    color: #fff;
+    font-size: 15px;
+    position: relative;
+}
+
+footer::before {
+    content: "";
+    background-image: url(../img/pattern2.png);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+footer ul {
+    list-style: none;
+}
+
+
+footer .footer_top {
+    background-color: white;
+    background-image: url(../img/pattern3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 60px;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+}
+
+footer .footer_top .form-content {
+    width: 50%;
+}
+
+footer form {
+    display: flex;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    border-radius: 8px;
+}
+
+footer .footer_top form input {
+    padding: 25px 20px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #888;
+    border-radius: 8px 0 0 8px;
+    border: 1px solid #fff;
+    outline: none;
+    transition: all .5s;
+    background-color: white;
+    width: 100%;
+}
+
+footer .footer_top button {
+
+    padding: 20px 35px;
+    font-size: 15px;
+    background-size: 200%;
+    border-color: transparent;
+    transition: all 0.5s;
+    border-radius: 0 8px 8px 0;
+    color: white;
+    cursor: pointer;
+    line-height: 0;
+    transition: all 0.5s;
+}
+
+footer .footer_top button:hover {
+    background-position: right bottom;
+}
+
+footer .footer_top button:hover i {
+    animation: baytutraiqua 0.5s forwards;
+    display: inline-block;
+}
+
+
+footer .footer_top input:hover,
+footer .footer_top input:focus {
+    border-color: #f55f8d;
+}
+
+footer .footer_item h3 {
+    font-size: 24px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    color: #fff;
+}
+
+footer .footer_item h3::before,
+footer .footer_item h3::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    border-radius: 20px;
+    background: linear-gradient(to right, #f55f8d 0, #f8ae56 51%, #f55f8d 100%);
+    background-size: 200%;
+}
+
+footer .footer_item h3::before {
+    width: 15px;
+}
+
+footer .footer_item h3::after {
+    width: 45px;
+    left: 23px;
+}
+
+/* footer::before {
+    content: "";
+    background-image: url(../img/pattern2.png);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+} */
 
 
 
+footer .footer_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 0;
+    position: relative;
+}
 
+footer .footer_item {
+    width: 25%;
+}
+
+footer .footer_item li {
+    padding: 8px 0;
+}
+
+footer .footer_item li a {
+    text-decoration: none;
+    color: #636363;
+    font-size: 16px;
+    transition: all .5s;
+}
+
+footer .footer_item li a i {
+    margin-right: 18px;
+}
+
+footer .footer_item li:hover a {
+    color: white;
+}
+
+footer .footer_item:first-child>ul li i {
+
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+footer .footer_item:first-child>ul li {
+    display: flex;
+    align-items: center;
+}
+
+
+
+footer .flex-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .copyright {
+    background-color: #1F343B;
+    color: white;
+    padding: 10px 0;
+    position: relative;
+}
+
+footer .social a {
+    color: white;
+    width: 32px;
+    height: 32px;
+    background-color: #36494F;
+    border-radius: 50%;
+    line-height: 31px;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+footer .social a:hover {
+    background-color: #f5608d;
+}
 
 
 @keyframes baytutrenxuong {
