@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samar By Thạnh</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
 
     <!-- Font awsome 6.5.2-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -19,15 +20,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/solid.min.css"
         integrity="sha512-Hp+WwK4QdKZk9/W0ViDvLunYjFrGJmNDt6sCflZNkjgvNq9mY+0tMbd6tWMiAlcf1OQyqL4gn2rYp7UsfssZPA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Flat Icon -->
     <link rel="stylesheet" href="./css/Flaticon/flaticon.css">
+
+    <!-- FancyBox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+    <!--Animate CSS  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
     <!-- CSS EXternal-->
     <link rel="stylesheet" href="./css/styles.css">
-
 </head>
 
 <body>
-    <header>
+    <!-- Header -->
+    <header id="ToTop">
         <div class="container">
             <div class="header_content">
                 <div class="header_logo">
@@ -51,17 +60,21 @@
             </div>
         </div>
     </header>
+    <!-- banner Block -->
     <section class="banner">
         <div class="container">
             <div class="banner_content">
                 <div class="banner_title">
                     <div class="title">
-                        <span class="txt_red">We are The Best</span>
-                        <h2>Freelance Product Designer Running</h2>
-                        <p>We develop the relationships that underpin the next phase in your
+                        <span class="txt_red wow animate__animated animate__fadeInUp">We are The Best</span>
+                        <h2 class="wow animate__animated animate__fadeInUp animate__delay-1s">Freelance Product Designer
+                            Running</h2>
+                        <p class="wow animate__animated animate__fadeInUp animate__delay-1s">We develop the
+                            relationships that underpin
+                            the next phase in your
                             <br> organisation’s growth.
                         </p>
-                        <ul>
+                        <ul class="wow animate__animated animate__fadeInUp animate__delay-2s">
                             <li>
                                 <i class="fa-solid fa-check bg_gradient"></i>Master's degree in designing
                             </li>
@@ -69,10 +82,12 @@
                                 <i class="fa-solid fa-check bg_gradient"></i>Outstanding mobile design
                             </li>
                         </ul>
-                        <button class="btn-orange bg_gradient">get started</button>
+                        <button
+                            class="btn-orange bg_gradient wow animate__animated animate__fadeInUp animate__delay-2s">get
+                            started</button>
                     </div>
                 </div>
-                <div class="banner_img">
+                <div class="banner_img wow animate__animated animate__fadeInUp animate__delay-1s">
                     <img src="./img/pic3_1.png" alt="banner">
                 </div>
             </div>
@@ -119,15 +134,17 @@
             </div>
         </div>
     </section>
+
+    <!-- Contact Block -->
     <section class="contact space-inner">
         <div class="container">
             <div class="contact_content">
-                <div class="contact_left">
+                <div class="contact_left wow animate__animated animate__fadeInLeft animate__delay-1s">
                     <div class="contact-img">
                         <img src="./img/pic1.jpg" alt="contact">
                     </div>
                 </div>
-                <div class="contact_right">
+                <div class="contact_right wow animate__animated animate__fadeInRight animate__delay-1s">
                     <div class="title">
                         <span class="txt_red">About Us</span>
                         <h2>Build Your
@@ -152,6 +169,7 @@
             </div>
         </div>
     </section>
+    <!-- Number block -->
     <section class="number">
         <div class="container">
             <div class="number_content">
@@ -178,17 +196,18 @@
             </div>
         </div>
     </section>
-    <!-- Feauture -->
+    <!-- Feauture block-->
     <section class="feature space-inner">
         <div class="container">
             <div class="feature_content">
                 <div class="feature_left">
                     <div class="feature_title title">
-                        <span class="txt_red">Our Features</span>
-                        <h2>Behind The Story
-                            Of Samar Agency</h2>
+                        <div class="wow animate__animated animate__fadeInLeft">
+                            <span class="txt_red">Our Features</span>
+                            <h2>Behind The Story Of Samar Agency</h2>
+                        </div>
                         <div class="group_item">
-                            <div class="feature_item">
+                            <div class="feature_item wow animate__animated animate__fadeInRight animate__delay-1s">
                                 <div class="feature_bg">
                                     <i class="flaticon-idea"></i>
                                     <div class="feature__title">
@@ -198,7 +217,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="feature_item">
+                            <div
+                                class="feature_item feature_item wow animate__animated animate__fadeInRight animate__delay-2s">
                                 <div class="feature_bg">
                                     <i class="flaticon-coding"></i>
                                     <div class="feature__title">
@@ -208,7 +228,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="feature_item">
+                            <div
+                                class="feature_item feature_item wow animate__animated animate__fadeInRight animate__delay-3s">
                                 <div class="feature_bg">
                                     <i class="flaticon-rocket"></i>
                                     <div class="feature__title">
@@ -221,7 +242,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="feature_right">
+                <div class="feature_right wow animate__animated animate__hinge animate__delay-4s">
                     <div class="feature_img">
                         <img src="./img/pic3.png" alt="feature">
                     </div>
@@ -229,6 +250,7 @@
             </div>
         </div>
     </section>
+    <!-- portfolio -->
     <section class="portfolio">
         <div class="container space-inner">
             <div class="title">
@@ -236,11 +258,12 @@
                 <h2>Our Latest Work</h2>
             </div>
             <div class="portfolio_content">
-                <div class="portfolio_item">
+                <div class="wow animate__animated animate__fadeInUp portfolio_item">
                     <img src="./img/pic1_2.jpg" alt="Portfolio">
                     <div class="overlay lightway">
                         <div class="overlay_icon">
-                            <a href="#">
+                            <a href="./img/pic1_2.jpg" data-fancybox="gallery" data-src="./img/pic1_2.jpg"
+                                data-caption="Design I" data-thumb="./img/pic1_2.jpg">
                                 <i class="fa-solid fa-plus"></i>
                             </a>
                         </div>
@@ -250,11 +273,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="portfolio_item">
+                <div class="portfolio_item wow animate__animated animate__fadeInUp">
                     <img src="./img/pic2_1.jpg" alt="Portfolio">
                     <div class="overlay lightway">
                         <div class="overlay_icon">
-                            <a href="#">
+                            <a href="./img/pic2_1.jpg" data-fancybox="gallery" data-src="./img/pic2_1.jpg"
+                                data-caption="Design II" data-thumb="./img/pic1_2.jpg">
                                 <i class="fa-solid fa-plus"></i>
                             </a>
                         </div>
@@ -264,11 +288,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="portfolio_item">
+                <div class="portfolio_item wow animate__animated animate__fadeInUp animate__delay-1s">
                     <img src="./img/pic3_1.jpg" alt="Portfolio">
                     <div class="overlay lightway">
                         <div class="overlay_icon">
-                            <a href="#">
+                            <a href="./img/pic3_1.jpg" data-fancybox="gallery" data-src="./img/pic3_1.jpg"
+                                data-caption="Design III" data-thumb="./img/pic3_1.jpg">
                                 <i class="fa-solid fa-plus"></i>
                             </a>
                         </div>
@@ -278,11 +303,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="portfolio_item">
+                <div class="portfolio_item portfolio_item wow animate__animated animate__fadeInUp animate__delay-2s">
                     <img src="./img/pic4.jpg" alt="Portfolio">
                     <div class="overlay lightway">
                         <div class="overlay_icon">
-                            <a href="#">
+                            <a href="./img/pic4.jpg" data-fancybox="gallery" data-src="./img/pic4.jpg"
+                                data-caption="Design IV" data-thumb="./img/pic4.jpg">
                                 <i class="fa-solid fa-plus"></i>
                             </a>
                         </div>
@@ -292,11 +318,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="portfolio_item">
+                <div class="portfolio_item portfolio_item wow animate__animated animate__fadeInUp animate__delay-3s">
                     <img src="./img/pic5.jpg" alt="Portfolio">
                     <div class="overlay lightway">
                         <div class="overlay_icon">
-                            <a href="#">
+                            <a href="" data-fancybox="gallery" data-src="./img/pic5.jpg" data-caption="Design V"
+                                data-thumb="./img/pic5.jpg">
                                 <i class="fa-solid fa-plus"></i>
                             </a>
                         </div>
@@ -306,11 +333,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="portfolio_item">
+                <div class="portfolio_item portfolio_item wow animate__animated animate__fadeInUp animate__delay-1s">
                     <img src="./img/pic6.jpg" alt="Portfolio">
                     <div class="overlay lightway">
                         <div class="overlay_icon">
-                            <a href="#">
+                            <a href="" data-fancybox="gallery" data-src="./img/pic6.jpg" data-caption="Design VI"
+                                data-thumb="./img/pic6.jpg">
                                 <i class="fa-solid fa-plus"></i>
                             </a>
                         </div>
@@ -332,7 +360,7 @@
                 <h2>Latest News & Blog</h2>
             </div>
             <div class="news_content">
-                <div class="news_item">
+                <div class="news_item wow animate__animated animate__slideOutRight">
                     <div class="news_bg">
                         <div class="news_img">
                             <img src="./img/pic1_1.jpg" alt="pic1_1">
@@ -358,7 +386,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="news_item">
+                <div class="news_item wow animate__animated animate__slideOutDown animate__delay-2s">
                     <div class="news_bg">
                         <div class="news_img">
                             <img src="./img/pic2.jpg" alt="pic2">
@@ -384,7 +412,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="news_item">
+                <div class="news_item wow animate__animated animate__slideOutLeft animate__delay-1s">
                     <div class="news_bg">
                         <div class="news_img">
                             <img src="./img/pic3.jpg" alt="pic3">
@@ -412,9 +440,11 @@
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer_top title">
+            <div class="footer_top title wow animate__animated animate__fadeInUp">
                 <div class="title-form">
                     <h3>Subscribe To Our Newsletter</h3>
                 </div>
@@ -422,12 +452,12 @@
                     <form>
                         <input type="text" placeholder="Your Email Address">
                         <button class="bg_gradient">
-                            <i class="fa-solid fa-play"></i>
+                            <i class="fa-solid fa-poo"></i>
                         </button>
                     </form>
                 </div>
             </div>
-            <div class="footer_content">
+            <div class="footer_content wow animate__animated animate__fadeIn animate__delay-1s">
                 <div class="footer_item">
                     <a href="#">
                         <img src="./img/logo-white.png" alt="logo">
@@ -493,6 +523,9 @@
             </div>
         </div>
     </footer>
+    <a href="#ToTop" class="backToTop cd-top text-replace js-cd-top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
     <!-- Jquery 3.7.0 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -506,15 +539,38 @@
     <!-- Jquery Countup import File -->
     <script src="./js/CountUp/jquery.countup.js"></script>
 
-    <!-- Go on and Count Up hahaha :)) -->
+    <!-- Countup -->
     <script>
         $('.counter').counterUp({
-            delay: 10,
+            delay: 5,
             time: 3000,
             beginAt: 0,
         });
+    </script>
+
+    <!-- Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+        Fancybox.bind("[data-fancybox]", {
+        });
 
     </script>
+    <!-- Control Animate Duration time -->
+    <script>
+        document.documentElement.style.setProperty('--animate-duration', '2s');
+    </script>
+
+    <!-- Wow JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+    <!-- backtotop JS -->
+    <script src="./js/BackToTop/assets/js/util.js"></script>
+    <script src="./js/BackToTop/assets/js/main.js"></script>
 </body>
 
 </html>
