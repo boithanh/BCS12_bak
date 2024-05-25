@@ -46,6 +46,7 @@ console(tongTienMonAn);
 tongTienMonAn += 10000;
 // Có thể tạo nhanh dòng Consolog bằng cách cài Extention: ES7 trên VScode
 
+let tinhToan = 300000;
 
 
 

@@ -1,0 +1,12 @@
+.mauChuTrang {
+    color: white;
+}
+
+.mauChuDo {
+    color: red;
+}
+
+body.dark {
+    background-color: black;
+    color: white;
+}
