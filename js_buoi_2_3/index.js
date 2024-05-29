@@ -106,7 +106,6 @@ hinhbongden.onmouseleave = function () {
 }
 
 // Làm Darkthem light theme
-
 document.querySelector(".btn-warning").onclick = function () {
     // Classlist.toggle kiểm tra có class đó chưa, nếu chưa có thì thêm vào và nếu có rồi thì sẽ xóa ra --> phục vụ cho việc gắn class dark vào để kích hoạt thêm tối hoặc gỡ ra đê có light theme: 
     document.querySelector("body").classList.toggle("dark");
@@ -118,3 +117,30 @@ document.querySelector(".btn-warning").onclick = function () {
     //classList.remove giúp gỡ bỏ CSS ra khỏi thẻ, có thể kết hợp vs classList.add để custom giao diện
     // document.getElementById("demo3").classList.remove("hehe");
 }
+
+// Tương tác tạo thẻ HTML thông qua javascript
+// Sử dụng createElement để tạo the
+let theImg = document.createElement("img");
+console.log(theImg);
+theImg.src =
+    "https://i.pinimg.com/236x/4f/9a/0c/4f9a0c9fa8a6589706a6d9f59bdc6737.jpg";
+theImg.className = "h-100 w-100";
+document.getElementById("demoCreateElement").appendChild(theImg);
+
+let phepTinh = 3 + 7;
+// Swr dujng chuoi HTML
+//Ki Thuật string template
+// Nếu sử dụng string template bắt buộc phải sử dụng dấu huyền ở 2đầu (Thay ngoặc kép bằng dấu huyền)
+document.getElementById("demo3").innerHTML += `
+<div class="card demo_card" style="width: 18rem;" id="card">
+  <img src=${srcImg} class="card-img-top" alt="...">
+  <div class="card-body" id='card-body'>
+    <h5 class="card-title">${hoTenPokemon}</h5>
+    <p class="card-text">${3 + 4 + 50 * 200}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+`;
+
+// Thực hiện viết DOM tới thẻ div vừa tạo ra va thay đổi nội dung
+document.getElementById("card-body").classList.add("bg-danger");

@@ -10,3 +10,7 @@ body.dark {
     background-color: black;
     color: white;
 }
+
+.demo.card {
+    color: violet;
+}
