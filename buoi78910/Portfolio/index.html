@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>Portffolio by Thạnh</title>
+    <link rel="icon" type="image/x-icon" href="./image/logo_me_black.png">
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -36,7 +37,8 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link me-3 text-white position-relative" aria-current="page" href="#">Home</a>
+                            <a id="home" class="nav-link me-3 text-white position-relative" aria-current="page"
+                                href="#">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link me-3 text-white position-relative" href="#">About</a>
@@ -63,7 +65,8 @@
                     aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item vh-100 active">
+                <div class="carousel-item active">
+                    <div class="overlay"></div>
                     <img src="./image/finland.jpg" class="d-block w-100" alt="...">
                     <div class="carousel_content">
                         <img class="animate__animated animate__fadeInUp animate__slow" src="./image/01-3.jpg" alt="">
@@ -73,7 +76,8 @@
                             companies to grow.</p>
                     </div>
                 </div>
-                <div class="carousel-item vh-100">
+                <div class="carousel-item">
+                    <div class="overlay"></div>
                     <img src="./image/mountains.jpg" class="d-block w-100" alt="...">
                     <div class="carousel_content">
                         <img class="animate__animated animate__fadeInUp animate__slow" src="./image/02-3.jpg" alt="">
@@ -83,7 +87,8 @@
                             companies to grow.</p>
                     </div>
                 </div>
-                <div class="carousel-item vh-100">
+                <div class="carousel-item">
+                    <div class="overlay"></div>
                     <img src="./image/mountains-1.jpg" class="d-block w-100" alt="...">
                     <div class="carousel_content">
                         <img class="animate__animated animate__fadeInUp animate__slow" src="./image/03-3.jpg" alt="">
@@ -97,38 +102,48 @@
         </div>
     </section>
     <section class="cyber_project py-5">
-        <div class="container">
-            <div class="cyber_project_title">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="cyber_project_title title">
+                    <h2>I Love What I Do
+                    </h2>
+                    <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla
+                        mollis
+                        dapibus nunc, ut rhoncus turpis sodales quis. Integer sit amet mattis quam.Vestibulum ante ipsum
+                        primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mollis dapibus nunc </p>
+                </div>
             </div>
             <div class="cyber_project_content">
-                <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link border border-black mx-2 text-black active" id="pills-home-tab"
-                            data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab"
-                            aria-controls="pills-home" aria-selected="true">All Project</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link border border-black mx-2 text-black" id="pills-profile-tab"
-                            data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab"
-                            aria-controls="pills-profile" aria-selected="false">Illustration</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link border border-black mx-2 text-black" id="pills-contact-tab"
-                            data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab"
-                            aria-controls="pills-contact" aria-selected="false">Photography</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link border border-black mx-2 text-black" id="pills-disabled-tab"
-                            data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab"
-                            aria-controls="pills-disabled" aria-selected="false">website</button>
-                    </li>
-                </ul>
+                <div class="row">
+                    <ul class="nav nav-pills py-4 justify-content-center" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link border border-black mx-2 text-black active" id="pills-home-tab"
+                                data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab"
+                                aria-controls="pills-home" aria-selected="true">All Project</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link border border-black mx-2 text-black" id="pills-profile-tab"
+                                data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab"
+                                aria-controls="pills-profile" aria-selected="false">Illustration</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link border border-black mx-2 text-black" id="pills-contact-tab"
+                                data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab"
+                                aria-controls="pills-contact" aria-selected="false">Photography</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link border border-black mx-2 text-black" id="pills-disabled-tab"
+                                data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab"
+                                aria-controls="pills-disabled" aria-selected="false">website</button>
+                        </li>
+                    </ul>
+                </div>
                 <div class="tab-content" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                         aria-labelledby="pills-home-tab" tabindex="0">
                         <div class="row gy-4">
                             <!-- Item -->
-                            <div class="col-12 col-sm-6 col-xl-4">
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                                 <div class="wow project_item animate__animated animate__zoomIn">
                                     <img src="./image/g1.jpg" alt="G1">
                                     <div class="project_item_text">
@@ -138,7 +153,7 @@
                                 </div>
                             </div>
                             <!-- Item -->
-                            <div class="col-12 col-sm-6 col-xl-4">
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                                 <div class="wow project_item animate__animated animate__zoomIn">
                                     <img src="./image/g2.jpg" alt="G1">
                                     <div class="project_item_text">
@@ -148,7 +163,7 @@
                                 </div>
                             </div>
                             <!-- Item -->
-                            <div class="col-12 col-sm-6 col-xl-4">
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                                 <div class="wow project_item animate__animated animate__zoomIn">
                                     <img src="./image/g3.jpg" alt="G1">
                                     <div class="project_item_text">
@@ -158,7 +173,7 @@
                                 </div>
                             </div>
                             <!-- Item -->
-                            <div class="col-12 col-sm-6 col-xl-4">
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                                 <div class="wow project_item animate__animated animate__zoomIn">
                                     <img src="./image/g4.jpg" alt="G1">
                                     <div class="project_item_text">
@@ -167,7 +182,7 @@
                                     </div>
                                 </div>
                             </div> <!-- Item -->
-                            <div class="col-12 col-sm-6 col-xl-4">
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                                 <div class="wow project_item animate__animated animate__zoomIn">
                                     <img src="./image/g5.jpg" alt="G1">
                                     <div class="project_item_text">
@@ -176,7 +191,7 @@
                                     </div>
                                 </div>
                             </div> <!-- Item -->
-                            <div class="col-12 col-sm-6 col-xl-4">
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                                 <div class="wow project_item animate__animated animate__zoomIn">
                                     <img src="./image/g6.jpg" alt="G1">
                                     <div class="project_item_text">
@@ -191,7 +206,7 @@
                         tabindex="0">
                         <div class="row gy-4">
                             <!-- Item -->
-                            <div class="col-12 col-sm-6">
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                                 <div class="wow project_item animate__animated animate__zoomIn">
                                     <img src="./image/g1.jpg" alt="G1">
                                     <div class="project_item_text">
@@ -201,7 +216,7 @@
                                 </div>
                             </div>
                             <!-- Item -->
-                            <div class="col-12 col-sm-6">
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                                 <div class="wow project_item animate__animated animate__zoomIn">
                                     <img src="./image/g2.jpg" alt="G1">
                                     <div class="project_item_text">
@@ -211,7 +226,7 @@
                                 </div>
                             </div>
                             <!-- Item -->
-                            <div class="col-12 col-sm-6">
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                                 <div class="wow project_item animate__animated animate__zoomIn">
                                     <img src="./image/g3.jpg" alt="G1">
                                     <div class="project_item_text">
@@ -226,7 +241,7 @@
                         tabindex="0">
                         <div class="row gy-4">
                             <!-- Item -->
-                            <div class="col-12 col-sm-6">
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                                 <div class="wow project_item animate__animated animate__zoomIn">
                                     <img src="./image/g3.jpg" alt="G1">
                                     <div class="project_item_text">
@@ -236,7 +251,7 @@
                                 </div>
                             </div>
                             <!-- Item -->
-                            <div class="col-12 col-sm-6">
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                                 <div class="wow project_item animate__animated animate__zoomIn">
                                     <img src="./image/g4.jpg" alt="G1">
                                     <div class="project_item_text">
@@ -251,7 +266,7 @@
                         tabindex="0">
                         <div class="row gy-4">
                             <!-- Item -->
-                            <div class="col-12 col-sm-6">
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                                 <div class="wow project_item animate__animated animate__zoomIn">
                                     <img src="./image/g6.jpg" alt="G1">
                                     <div class="project_item_text">
@@ -270,9 +285,10 @@
     <section class="cyber_available">
         <div class="container position-relative">
             <!-- title  -->
-            <div class="cyber_avai_title">
+            <div class="cyber_avai_title title">
                 <h2>I'm Available For Hire</h2>
-                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mollis
+                <p class="py-3">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                    Nulla mollis
                     dapibus
                     <br>
                     nunc, ut rhoncus turpis sodales quis. Integer sit amet mattis quam.
@@ -281,10 +297,10 @@
             <!-- content  -->
             <div class="cyber_avai_content">
                 <!-- 2 thuộc tính cho row thêm vào để cho ai ko su dụng hê thống grid boostrap maf tu lafm lay out grid -->
-                <div class="row d-block d-sm-grid">
+                <div class="row">
                     <!-- item  -->
-                    <div class="col-12 col-md-6 col-xl-4">
-                        <div class="cyber_avai_item">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-5">
+                        <div class="cyber_avai_item title">
                             <i class="fa-solid fa-paintbrush"></i>
                             <h3>Design</h3>
                             <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
@@ -292,29 +308,87 @@
                                 dapibus nunc</p>
                         </div>
                     </div>
-                    <!-- item  -->
-                    <div <h3>Design</h3>
-                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-                            Nulla mollis
-                            dapibus nunc</p>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 title mb-5">
+                        <div class="cyber_avai_item">
+                            <i class="fa fa-shekel-sign"></i>
+                            <h3>Marketing</h3>
+                            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                                Nulla mollis
+                                dapibus nunc</p>
+                        </div>
                     </div>
-                </div>
-                <!-- item  -->
-                <div class="col-12 col-md-6 col-xl-4">
-                    <div class="cyber_avai_item">
-                        <i class="fa fa-camera"></i>
-                        <h3>Design</h3>
-                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-                            Nulla mollis
-                            dapibus nunc</p>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 title mb-5">
+                        <div class="cyber_avai_item">
+                            <i class="fa fa-camera"></i>
+                            <h3>Photography</h3>
+                            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                                Nulla mollis
+                                dapibus nunc</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+    <section class="branch">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5">
+                    <div class="branch_title title">
+                        <h2>Our Achievement <br>and Award</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+                            ullamcorper mattis, pulvinar dapibus leo.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-5 col-md-5 col-lg-5 col-xl-7 position-relative">
+                    <div class="branch_content">
+                        <p>Luctus porta semper aptent morbi. Vestibulum lectus tempus augue dictumst enim commodo
+                            facilisis. Mus laoreet scelerisque habitant urna dui sem diam. Purus dis nam eget.
+                            Scelerisque
+                            placerat lectus lorem etiam. Elementum integer phasellus lectus.</p>
+                        <div class="branch_img">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="./image/award-1.png" alt="award">
+                                </div>
+                                <div class="col">
+                                    <img src="./image/award-2.png" alt="award">
+                                </div>
+                                <div class="col">
+                                    <img src="./image/award-3.png" alt="award">
+                                </div>
+                                <div class="col">
+                                    <img src="./image/award-4.png" alt="award">
+                                </div>
+                                <div class="col">
+                                    <img src="./image/award-5.png" alt="award">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </section>
-    <section class="branch"></section>
-    <footer></footer>
+    <footer class="py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-xl-12">
+                    <div class="footer_top pb-4">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <div class="footer_bottom pt-4">
+                        <p>© 2021 CyberPortfolio. All rights reserved | Designed by CyberSoft</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Back To top  -->
     <!-- <a href="#totop" class="back_to_top">
