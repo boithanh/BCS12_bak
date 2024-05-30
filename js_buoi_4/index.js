@@ -103,27 +103,137 @@ document.querySelector(".btn-dark").onclick = function () {
 
 
 // Tạo một chức năng xử lí khi người dùng bấm vào tính tiền lương sẽ trả kết quả tiền lương trong tuần của họ dựa số giờ làm, lưu ý nếu làm trên 40t thì công thức tính sẽ là:  soTien * 40 + soTien * số giờ làm trên 40 * 1.5
-document.querySelector("#baiTap2 .btn-success").onclick = function () {
-  // truy xuất dữ liệu
-  let soTien = document.getElementById("soTien").value * 1;
-  let soGioLam = document.getElementById("soGioLam").value * 1;
-  // TH1 : làm việc từ 0 đến 40t ==> soTien * soGioLam
-  // TH2: làm việc trên 40t ==> soTien * 40 + (soGioLam - 40) * soTien * 1.5
-  let tongTienLuong = 0;
-  if (soGioLam > 40) {
-    tongTienLuong = soTien * 40 + (soGioLam - 40) * soTien * 1.5;
-  } else {
-    // 0 < soGioLam <= 40
-    tongTienLuong = soTien * soGioLam;
+// document.querySelector("#baiTap2 .btn-success").onclick = function () {
+//   // truy xuất dữ liệu
+//   let soTien = document.getElementById("soTien").value * 1;
+//   let soGioLam = document.getElementById("soGioLam").value * 1;
+//   // TH1 : làm việc từ 0 đến 40t ==> soTien * soGioLam
+//   // TH2: làm việc trên 40t ==> soTien * 40 + (soGioLam - 40) * soTien * 1.5
+//   let tongTienLuong = 0;
+//   if (soGioLam > 40) {
+//     tongTienLuong = soTien * 40 + (soGioLam - 40) * soTien * 1.5;
+//   } else {
+//     // 0 < soGioLam <= 40
+//     tongTienLuong = soTien * soGioLam;
+//   }
+//   // Xử lí đưa dữ liệu lên giao diện
+//   document.getElementById(
+//     "ketQua2"
+//   ).innerHTML = `Tổng tiền lương tuần này của bạn là: ${tongTienLuong.toLocaleString(
+//     "vi",
+//     {
+//       style: "currency",
+//       currency: "VND",
+//     }
+//   )}`;
+// };
+
+
+// document.querySelector("#baitap3 .btn-outline-dark").onclick = function () {
+//   let diemToan = document.getElementById("diemToan").value * 1;
+//   let diemLy = document.getElementById("diemLy").value * 1;
+//   let diemHoa = document.getElementById("diemHoa").value * 1;
+//   let diemVan = document.getElementById("diemVan").value * 1;
+//   let diemAnh = document.getElementById("diemAnh").value * 1;
+//   let diemTrungBinh = (diemToan + diemLy + diemHoa + diemVan + diemAnh) / 5;
+//   console.log(diemTrungBinh);
+
+//   if (diemTrungBinh < 5) {
+//     console.log("Hoc sinh nay dat trung binh");
+//   }
+//   else if (diemTrungBinh >= 5 && diemTrungBinh <= 7) {
+//     console.log("Hoc sinh kha");
+//   }
+//   else {
+//     console.log("hoc sinh gioi");
+//   }
+// }
+
+document.getElementById("formNhapDiem").onsubmit =
+  //event là thành phần của JS gọi đến DOM trực tiếp ko cần dùng getElementById hoặc getquerrySelector đk sử dụng là trong function phải có biến event
+  function (event) {
+    //Ngan chặn reload trang  mac dinh khi chay nut submit (o su kien submit mặc định có )
+    event.preventDefault()
+    // event.target
+    console.log("toi la su kien submit"); //Test sự kiện submit có chạy ko trước khi viết tiếp :))) 
+    //event.target tương đương vs câu lệnh Dom tới thẻ và ở đây là DOM tới thẻ đang chạy sự kiện
+    // console.log(event.target);
+    //Clear dữ liệu của các sự kiện của các inout select trong form
+    // document.getElementById("formNhapDiem").reset();
+    //thay cho câu lệnh này có thể ko cần viết trong function nửa mà có thể gọi câu lệnh này bên ngoài bằng hình thức target vì target có thể gọi thẳng đến đối tượng đó mà ko cần phải gêtlement
+    // event.target.reset();
+
+
+    //Lưu ý các lệnh lấy dữ liệu từ ng dùng nhập vào phải nằm trong hàm và sau sự kiện khi ng dùng ấn nút submit
+    let diemToan = document.getElementById("diemToan").value * 1;
+    let diemLy = document.getElementById("diemLy").value * 1;
+    let diemHoa = document.getElementById("diemHoa").value * 1;
+    let diemVan = document.getElementById("diemVan").value * 1;
+    let diemAnh = document.getElementById("diemAnh").value * 1;
+    let diemTrungBinh = (diemToan + diemLy + diemHoa + diemVan + diemAnh) / 5;
+    let danhGia = "";
+    // if (diemTrungBinh < 5) {
+    //   danhGia = "Trung Bình";
+    // }
+    // if (diemTrungBinh >= 5 && diemTrungBinh <= 7) {
+    //   danhGia = "Khá"
+    // }
+    // if (diemTrungBinh > 7) {
+    //   danhGia = "Giỏi"
+    // } 
+    //Đây là cách cũ ko nên dung vì sau này có else if nên logic sẽ chặt chẽ và dễ viết hơn.
+
+    //else if
+    // console.log(diemTrungBinh);
+    // if (diemTrungBinh >= 5 && diemTrungBinh <= 7) {
+    //   danhGia = "khá";
+    // }
+    // else if (diemTrungBinh >= 7 && diemTrungBinh <= 9) {
+    //   danhGia = "gioi";
+    // }
+    // else if (diemTrungBinh > 9) {
+    //   danhGia = "siêu giỏi"
+    // }
+    // else {
+    //   danhGia = "trung bình";
+    // }
+
+    diemTrungBinh >= 5 && diemTrungBinh <= 7 ? danhGia = "Khá" : diemTrungBinh >= 7 && diemTrungBinh <= 9 ? (danhGia = "giỏi") : diemTrungBinh > 9 ? (danhGia = "siêu giỏi") : (danhGia = "trung bình");
+
+    console.log(danhGia);
+    event.target.reset(); // Luôn luôn để ở vị trí cuối cùng sau khi người dùng nhập và bấm nút submit đ=thi mới clear nha :)) 
   }
-  // Xử lí đưa dữ liệu lên giao diện
-  document.getElementById(
-    "ketQua2"
-  ).innerHTML = `Tổng tiền lương tuần này của bạn là: ${tongTienLuong.toLocaleString(
-    "vi",
-    {
-      style: "currency",
-      currency: "VND",
+
+//Yêu cầu tạo một giao diện cho phép người dùng  lựa chọn  ai là người sử dụng máy tính
+//--> Lấy dữ liệu từ người dùng và hiển thị lên câu chào
+
+
+document.querySelector("#baiTap4 .btn-danger").onclick = function () {
+  let nguoiDung = document.getElementById("nguoiDung").value; // ở đây là string nên ko cần *1 để tính toán
+  // console.log(nguoiDung);
+  //Cáu trúc lệnh  swith case
+
+  switch (nguoiDung) {
+    //case
+    case "Chị Hai": {
+      console.log("hello Cô Hai");
     }
-  )}`;
-};
+      break;
+    case "Mẹ": {
+      console.log("Me oi cho con 5k");
+    }
+      break;
+    case "Ông": {
+      console.log("Chúc ông năm mới dui dẻ");
+    }
+      break;
+    default: {
+      console.log("ủa ai đang vô máy vậy");
+    }
+  }
+}
+
+//Tao 1 js va html ở 1 thư mục mới 
+//Từ bài tập capstoen mỗi bài tập tạo 1 repo trên github
+//tên repo EXAMPLE: KIEN_BCS12_BAITAPBUOI3
+
