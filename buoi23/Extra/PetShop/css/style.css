@@ -298,16 +298,29 @@ border-radius: 50px;
   background-attachment: fixed;
 }
 
-.intro .intro_img,
+.intro .group_img,
 .intro .intro_content {
   float: left;
 }
 
-.intro .intro_img {
-  width: 40%;
-  transform: rotate(40deg) translateX(110px) translateY(200px);
+/* .intro .group_img {
+  position: relative;
+} */
+
+.intro .intro_img:nth-child(1) {
+  width: 10%;
+  transform: rotate(-8deg) translateX(520px) translateY(200px);
   z-index: 1;
-  position: sticky;
+  position: absolute;
+}
+
+
+.intro .intro_img:nth-child(2) {
+  width: 30%;
+  transform: rotate(40deg) translateX(300px) translateY(150px);
+  z-index: 6;
+  position: absolute;
+
 }
 
 .intro .intro_img img {
@@ -324,12 +337,69 @@ border-radius: 50px;
       0% 70%,
       0% 30%);
   width: 60%;
+  overflow: hidden;
+  margin-left: 40%;
   padding: 60px 60px;
-  background-color: rgb(245 74 3 / 23%);
+  background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(2px);
-  box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+  /* HIệu ứng boxshadow gương mờ vào bên trong đối tượng  */
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 1);
   text-align: center;
+  z-index: 5;
+  position: relative;
+  transition: all 3s ease-out;
+
 }
+
+.intro .intro_content h2,
+.intro .intro_content span,
+.intro .intro_content p,
+.intro .intro_content .btn_style2 {
+  opacity: 0;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+.intro .intro_content:hover h2,
+.intro .intro_content:hover span,
+.intro .intro_content:hover p,
+.intro .intro_content:hover .btn_style2 {
+  opacity: 1;
+}
+
+.intro .intro_content:hover {
+  background-color: rgb(245 74 3 / 23%);
+}
+
+.intro .intro_content:hover h2,
+.intro .intro_content:hover span,
+.intro .intro_content:hover p {
+  transform: none;
+}
+
+
+.intro .intro_content::before {
+  content: "";
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  display: block;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  transform: skewX(-25deg);
+  transition: all 0.75s ease-in;
+}
+
+.intro .intro_content:hover::before {
+  left: 125%;
+}
+
+.intro .intro_content:hover .overlay {
+  opacity: 1;
+}
+
+
 
 .intro .intro_content span,
 .intro .intro_content h2,
