@@ -23,31 +23,29 @@ theh1.style.background = "black";
 theh1.style.color = "white";
 theh1.style.padding = "10px";
 
-
 // TƯơng tác vs thẻ ko có nội dung như img 
-document.getElementById('hinhanh').src = "https://cybersoft.edu.vn/wp-content/uploads/2022/08/IMG_1001.jpg";
-
+document.getElementById('hinhanh').src = "https://static1.srcdn.com/wordpress/wp-content/uploads/2022/11/four-star-dragon-ball.jpg?q=50&fit=contain&w=1140&h=&dpr=1.5";
 
 // Tuowng tac thêm vs 1 số class vào trong thẻ HTML
-let theh3 = document.getElementById("title_2").className;
+let theh3 = document.getElementById("title_2");
 // console.log(theh3);
 //Phải lấy thông tin class hiện tại trc, sau đó mới thay thế hoặc insert class vào
-document.getElementById("title_2").className = "bgblack text-white";
+// document.getElementById("title_2").className = "bgblack text-white";
 
-document.getElementById("title_2").className += "bg black bg-white" // "a" + "b" -> "ab"
+theh3.className += " bg-danger text-white" // "a" + "b" -> "ab"
 
 //Tương tác vs thẻ input
 let hoten = document.getElementById("hoten").value;
 console.log(hoten);
 
 // Sự kiện click
-// document.getElementById("btnBaiTap1").onclick = function () {
-//     //Tương tác lấy dữ liệu input người dùng
-//     let email = document.getElementById("email").value;
-//     let matkhau = document.getElementById("matkhau").value;
-//     console.log(email);
-//     console.log(matkhau);
-// }
+document.getElementById("btnBaiTap1").onclick = function () {
+    //Tương tác lấy dữ liệu input người dùng
+    let email = document.getElementById("email").value;
+    let matkhau = document.getElementById("matkhau").value;
+    console.log(email);
+    console.log(matkhau);
+}
 
 //Sự kieej doubleClick
 // document.getElementById("btnBaiTap1").ondblclick = function () {
@@ -84,8 +82,8 @@ document.querySelector(".container .btn-dark").onclick = function () {
 // }
 
 let hinhbongden = document.getElementById("hinhbongden");
-document.querySelector(".btn-dark").onclick = function () {
-    console.log("Toi la nut tat");
+document.querySelector(".btn-primary").onclick = function () {
+    console.log("Toi la nut tat"); // nên có bước này check xem nút click có hoạt động ko
     // Thay đổi hình ảnh của img thành bóng đèn tắt
     hinhbongden.src = './img/pic_bulboff.gif';
 }
@@ -120,20 +118,20 @@ document.querySelector(".btn-warning").onclick = function () {
 
 // Tương tác tạo thẻ HTML thông qua javascript
 // Sử dụng createElement để tạo the
+
 let theImg = document.createElement("img");
-console.log(theImg);
-theImg.src =
-    "https://i.pinimg.com/236x/4f/9a/0c/4f9a0c9fa8a6589706a6d9f59bdc6737.jpg";
+theImg.src = "https://i.pinimg.com/236x/4f/9a/0c/4f9a0c9fa8a6589706a6d9f59bdc6737.jpg";
 theImg.className = "h-100 w-100";
-document.getElementById("demoCreateElement").appendChild(theImg);
+document.getElementById("demoCreateElement").appendChild(theImg); //Sử dụng appendChild để lồng thẻ mới tạo vào 1 thẻ có sẵn hoặc dùng cách nối chuỗi bên dưới đều đc. Đối vs hình thức nối chuỗi bằng nội dung HTML có 1 điểm mới là gắn biến trực tiếp để show động nội dung trong chuỗi HTML (JS ES6)
 
 let phepTinh = 3 + 7;
-// Swr dujng chuoi HTML
+
+// Sử dụng chuoi HTML
 //Ki Thuật string template
 // Nếu sử dụng string template bắt buộc phải sử dụng dấu huyền ở 2đầu (Thay ngoặc kép bằng dấu huyền)
 document.getElementById("demo3").innerHTML += `
 <div class="card demo_card" style="width: 18rem;" id="card">
-  <img src=${srcImg} class="card-img-top" alt="...">
+  <img src=${theImg} class="card-img-top" alt="...">
   <div class="card-body" id='card-body'>
     <h5 class="card-title">${hoTenPokemon}</h5>
     <p class="card-text">${3 + 4 + 50 * 200}</p>
