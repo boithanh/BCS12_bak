@@ -602,9 +602,4 @@ input[type=radio]:checked~label {
   .container-contact100 {
     display: none;
   }
-
-  @page {
-    size: landscape;
-  }
-
 }
