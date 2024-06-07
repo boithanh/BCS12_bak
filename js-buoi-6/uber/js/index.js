@@ -58,88 +58,112 @@ function timKiemGiaTienThoiGianCho(loaiXe) {
     }
 };
 document.getElementById("btnTinhTien").onclick = function () {
-
-    console.log("Toi vua an nut tinh tien");
     //Truy xuat va lấy dữ liệu của các input số Km thời gian chờ và loại xe
-
     let soKm = document.getElementById("txt-km").value * 1; //*1 để ép về kiểu dữ liệu số để tính toán
     let thoiGianCho = document.getElementById("txt-thoiGianCho").value * 1;
     // let loaiXe = document.getElementsByName("uber-x").checked;
-
-    console.log(soKm);
-    console.log(thoiGianCho);
     // console.log(loaiXe);
     // console.log(loaiXe);
     // let loaiXe = document.querySelector("li input:checked");
     // console(loaiXe); --> cách 1
     let loaiXe = document.querySelector("input[type='radio']:checked").value;
-    console.log(loaiXe);
+
     // XỬ lý tìm kiếm giá tiền phù hợp
-    let soKmDauTien = tiemKiemGiaTienKmDauTien(loaiXe);
-    let soKmTu1Den19 = timKiemGiaTienTu1Den19(loaiXe);
-    let soKmTu19TroLen = timKiemGiaTienTu19TroLen(loaiXe);
+    let tienKmDauTien = tiemKiemGiaTienKmDauTien(loaiXe);
+    let tienKmTu1Den19 = timKiemGiaTienTu1Den19(loaiXe);
+    let tienKmTu19TroLen = timKiemGiaTienTu19TroLen(loaiXe);
     let tienThoiGianCho = timKiemGiaTienThoiGianCho(loaiXe);
-    console.log(soKmDauTien);
-    console.log(soKmTu1Den19);
-    console.log(soKmTu19TroLen);
-    console.log(tienThoiGianCho);
+    console.log(thoiGianCho);
 
     let tongTien = 0;
     if (soKm <= 1)
     //nguoi dùng đi khoảng 1km
     {
-        tongTien = soKmDauTien * soKm
+        tongTien = tienKmDauTien * soKm;
     }
     //Người dùng đi trong khoảng từ 1 đến 19
     else if (soKm > 1 && soKm <= 19) {
-        tongTien = soKmDauTien + (soKm - 1) * soKmTu1Den19
+        tongTien = tienKmDauTien + ((soKm - 1) * tienKmTu1Den19);
     }
     else {
         //TH3: Người dùng đi trên 19KM
-        tongTien = soKmDauTien + 18 * soKmTu1Den19 + (soKm - 19) * soKmTu1Den19
+        tongTien = tienKmDauTien + (18 * tienKmTu1Den19) + ((soKm - 19) * tienKmTu19TroLen);
     }
 
     //BTVN (tính thời gian chờ) 10p ==> (10 - 3) /3 
-    //let tongtienthoigiancho
+    let soLanBiPhatTheoThoiGianCho = Math.floor((thoiGianCho - 3) / 3);
+    let tongTienPhatThoiGianCho = tienThoiGianCho * soLanBiPhatTheoThoiGianCho;
+    let tongCongTatCa = tongTien + tongTienPhatThoiGianCho;
+    document.getElementById("divThanhTien").style.display = "block";
+    document.getElementById("xuatTien").innerHTML = tongCongTatCa.toLocaleString("vi",
+        {
+            currency: "VND",
+            style: "currency"
+        }
+    )
+    let tongTiennHoaDon = () => {
+        return tongCongTatCa;
+    }
 
-    document.getElementById(divThanhTien).style.display = "black";
-    document.getElementById("xuathien").innerHTML = tongTien.toLocaleString
 }
 
 
+
 document.getElementById("btnInHoaDon").onclick = function () {
+
     //Thực hiện xử lý tính toán
 
 
 
-
-    document.getElementById("model-body").innerHTML = `  <div
-    class="table-responsive"
-  >
-    <table
-      class="table table-primary"
-    >
+    // Thực hiện xử lý Fill các KQ đã tính toán bên trên vào Modal In hóa đơn dưới dạng hóa đơn chi tiết.
+    document.getElementById("modal-body").innerHTML = `<div class="table-responsive py-5">
+    <table class="table table-primary hoa-don-ne">
       <thead>
         <tr>
-          <th scope="col">Column 1</th>
-          <th scope="col">Column 2</th>
-          <th scope="col">Column 3</th>
+          <th colspan=" 4" scope="col">CHI TIẾT HÓA ĐƠN</th>
         </tr>
       </thead>
       <tbody>
-        <tr class="">
-          <td scope="row">R1C1</td>
-          <td>R1C2</td>
-          <td>R1C3</td>
+        <tr>
+          <td scope="row">CHI TIẾT</td>
+          <td>SỬ DỤNG</td>
+          <td>ĐƠN GIÁ(1000đ)</td>
+          <td>THÀNH TIỀN(1000đ)</td>
         </tr>
-        <tr class="">
-          <td scope="row">Item</td>
-          <td>Item</td>
-          <td>Item</td>
+        <tr>
+          <td scope="row">KM ĐẦU TIÊN</td>
+          <td></td>
+          <td>TÙY THEO LOẠI GRAB</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td scope="row">TỪ 1 ĐẾN 19 KM</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td scope="row">TỪ 19KM TRỞ LÊN</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+        <td scope="row">THỜI GIAN CHỜ</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+        <tr>
+          <td colspan="4" scope="row">TỔNG TIỀN</td>
         </tr>
       </tbody>
     </table>
   </div>`;
     //Gọi đến modal để hiển thị
-    $('#myModal').modal('show');
+    $('#exampleModal').modal('show');
+}
+
+function printPage() {
+    window.print();
 }

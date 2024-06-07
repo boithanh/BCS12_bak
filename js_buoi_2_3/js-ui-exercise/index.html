@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Bài Tập UI JS</title>
+    <link rel="icon" type="image/x-icon" href="img/logo_me.png">
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Additional Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome 6.2.0 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <main>
+        <section class="blockbaitap">
+            <div class="container">
+                <div class="row content_block">
+                    <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 block_item">
+                        <ul class="nav nav-pills mb-3 d-block" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                    data-bs-target="#baiTap1" type="button" role="tab" aria-controls="baiTap1"
+                                    aria-selected="true">Bài 1</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                    data-bs-target="#baiTap2" type="button" role="tab" aria-controls="baiTap2"
+                                    aria-selected="false">Bài 2</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                                    data-bs-target="#baiTap3" type="button" role="tab" aria-controls="baiTap3"
+                                    aria-selected="false">Bài 3</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                                    data-bs-target="#baiTap4" type="button" role="tab" aria-controls="baiTap4"
+                                    aria-selected="false">Bài 4</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                                    data-bs-target="#baiTap5" type="button" role="tab" aria-controls="baiTap5"
+                                    aria-selected="false">Bài 5</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 block_item">
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="baiTap1" role="tabpanel"
+                                aria-labelledby="pills-home-tab" tabindex="0">
+                                <div class="col-12 col-sm-12 col-md-12">
+                                    <h2>Tính tiền lương nhân viên</h2>
+                                    <p>Công thức: Lương = Lương 1 ngày * số ngày làm</p>
+                                    <p>Kiến thức áp dụng:</p>
+                                    <ul>
+                                        <li>Tìm tới thẻ và lấy giá trị</li>
+                                        <li>Tạo hàm cơ bản</li>
+                                        <li>Gắn sự kiện click cho button</li>
+                                        <li>Thay đổi nội dung cho thẻ</li>
+                                        <li>Xử lý load trang với button của form</li>
+                                    </ul>
+                                </div>
+                                <form id="frmBaiTap1" class="position-relative">
+                                    <div class="col-12 col-sm-12 col-md-12 group_input">
+                                        <label for="" class="form-label"></label>
+                                        <input type="text" class="form-control" name="" id="luong1Ngay"
+                                            aria-describedby="helpId" placeholder="Nhập lương một ngày" />
+                                        <label for="" class="form-label"></label>
+                                        <input type="text" class="form-control" name="" id="soNgayLam"
+                                            aria-describedby="helpId" placeholder="Nhập số ngày làm" />
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 group_btn">
+                                        <button type="submit" class="btn btn-outline-light my-4">Tính lương</button>
+                                    </div>
+                                </form>
+                                <div class="col-12 col-sm-12 col-md-12 kq mt-3">
+                                    <div class="shuriken"></div>
+                                    <p id="soTienLuong"></p>
+                                </div>
+
+                            </div>
+                            <div class="tab-pane fade" id="baiTap2" role="tabpanel" aria-labelledby="pills-profile-tab"
+                                tabindex="0">
+                                <div class="col-12 col-sm-12 col-md-12">
+                                    <h2>Tính giá trị trung bình</h2>
+                                    <p>Kiến thức áp dụng:</p>
+                                    <ul>
+                                        <li>Tìm tới thẻ và lấy giá trị</li>
+                                        <li>Tạo hàm cơ bản</li>
+                                        <li>Gắn sự kiện click cho button</li>
+                                        <li>Thay đổi nội dung cho thẻ</li>
+                                        <li>Xử lý load trang với button của form</li>
+                                        <li>Xử lý ép kiểu dữ liệu</li>
+                                    </ul>
+                                </div>
+                                <form id="frmBaiTap2" class="position-relative">
+                                    <div class="col-12 col-sm-12 col-md-12 group_input mb-3">
+                                        <label for="" class="form-label"></label>
+                                        <input type="text" class="form-control" name="" id="soThuNhat"
+                                            aria-describedby="helpId" placeholder="Nhập số thứ 1" />
+                                        <label for="" class="form-label"></label>
+                                        <input type="text" class="form-control" name="" id="soThuHai"
+                                            aria-describedby="helpId" placeholder="Nhập số thứ 2" />
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 group_input mb-3">
+                                        <label for="" class="form-label"></label>
+                                        <input type="text" class="form-control" name="" id="soThuBa"
+                                            aria-describedby="helpId" placeholder="Nhập số thứ 3" />
+                                        <label for="" class="form-label"></label>
+                                        <input type="text" class="form-control" name="" id="soThuTu"
+                                            aria-describedby="helpId" placeholder="Nhập số thứ 4" />
+                                    </div>
+
+                                    <div class="col-12 col-sm-12 col-md-6 group_input mb-3 mx-auto">
+                                        <label for="" class="form-label"></label>
+                                        <input type="text" class="form-control" name="" id="soThuNam"
+                                            aria-describedby="helpId" placeholder="Nhập số thứ 5" />
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 group_btn my-4">
+                                        <button type="submit" class="btn btn-outline-light">Tính trung
+                                            bình</button>
+                                    </div>
+                                </form>
+                                <div class="col-12 col-sm-12 col-md-12 kq mt-3">
+                                    <div class="shuriken"></div>
+                                    <p id="trungBinhCong"></p>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="baiTap3" role="tabpanel" aria-labelledby="pills-contact-tab"
+                                tabindex="0">
+                                <div class="col-12 col-sm-12 col-md-12">
+                                    <h2>Quy đổi tiền</h2>
+                                    <div class="debai">
+                                        <p>Kiến thức áp dụng:</p>
+                                        <ul>
+                                            <li>Áp dụng các kiến thức như bài 1 và 2</li>
+                                            <li>Giá USD mặc định 1 USD = 23500</li>
+                                            <li>Có thể dùng thêm NumberFormat để số tiền hiển thị đẹp hơn: NumberFormat
+                                            </li>
+                                            <li>VD: new Intl.NumberFormat('vn-VN').format(23500); => 23,500</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <form id="frmBaiTap3" class="position-relative">
+                                    <div class="col-12 col-sm-12 col-md-12 group_input mb-3">
+                                        <label for="" class="form-label"></label>
+                                        <input type="text" class="form-control" name="" id="tienCanQuyDoi"
+                                            aria-describedby="helpId" placeholder="Nhập số tiền USD" />
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 group_btn my-3">
+                                        <button type="submit" class="btn btn-outline-light mt-4">Quy đổi tiền</button>
+                                    </div>
+                                </form>
+                                <div class="col-12 col-sm-12 col-md-12 kq mt-5">
+                                    <div class="shuriken"></div>
+                                    <p id="soTienQuyDoi"></p>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="baiTap4" role="tabpanel" aria-labelledby="pills-contact-tab"
+                                tabindex="0">
+                                <div class="col-12 col-sm-12 col-md-12">
+                                    <h2>Tính diện tích, chu vi hình chữ nhật</h2>
+                                    <p>Kiến thức áp dụng:</p>
+                                    <ul>
+                                        <li>Áp dụng các kiến thức như các bài trước</li>
+                                        <li>Diện tích: dài x rộng</li>
+                                        <li>Chu vi: (dài + rộng) x 2</li>
+                                    </ul>
+                                </div>
+                                <form id="frmBaiTap4" class="position-relative">
+                                    <div class="col-12 col-sm-12 col-md-12 group_input mb-3">
+                                        <label for="" class="form-label"></label>
+                                        <input type="text" class="form-control" name="" id="chieuDai"
+                                            aria-describedby="helpId" placeholder="Nhập chiều dài" />
+                                        <label for="" class="form-label"></label>
+                                        <input type="text" class="form-control" name="" id="chieuRong"
+                                            aria-describedby="helpId" placeholder="Nhập chiều rộng" />
+                                    </div>
+
+                                    <div class="col-12 col-sm-12 col-md-12 group-select mt-4">
+                                        <select class="form-select form-select-lg" name="" id="chucNang">
+                                            <option selected>Vui lòng chọn chức năng</option>
+                                            <option value="dienTich">Tính diện tích</option>
+                                            <option value="chuVi">Tính chu vi</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 group_btn my-md-4">
+
+                                        <button type="submit" class="btn btn-outline-light">Tính chu vi hoặc diện
+                                            tích</button>
+                                    </div>
+                                </form>
+                                <div class="col-12 col-sm-12 col-md-12 kq mt-4">
+                                    <div class="shuriken"></div>
+                                    <p id="kqPhepTinh"></p>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="baiTap5" role="tabpanel" aria-labelledby="pills-contact-tab"
+                                tabindex="0">
+                                <div class="col-12 col-sm-12 col-md-12">
+                                    <h2>Tính tổng 2 ký số các số 2 chữ số</h2>
+                                    <p>Kiến thức áp dụng:</p>
+                                    <ul>
+                                        <li>Áp dụng cách tính như demo tổng 3 ký số trên lớp</li>
+                                    </ul>
+                                </div>
+                                <form id="frmBaiTap5" class="position-relative">
+                                    <div class="col-12 col-sm-12 col-md-12 group_input">
+                                        <label for="" class="form-label"></label>
+                                        <input type="text" class="form-control" name="" id="soHaiChuSo"
+                                            aria-describedby="helpId" placeholder="Nhập số có hai chữ số bất kỳ" />
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 group_btn mt-4">
+                                        <button type="submit" class="btn btn-outline-light">Tính tổng 2 ký số</button>
+                                    </div>
+                                </form>
+                                <div class="col-12 col-sm-12 col-md-12 kq mt-4">
+                                    <div class="shuriken"></div>
+                                    <p id="tongKySo"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

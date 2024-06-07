@@ -1,82 +1,85 @@
-
-
-
-
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
-  @import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
 
 * {
-	margin: 0px; 
-	padding: 0px; 
-	box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-body, html {
-	height: 100%;
-	font-family: Lato;
+body,
+html {
+  height: 100%;
+  font-family: Lato;
 }
 
 /*---------------------------------------------*/
 a {
-	font-family: Lato;
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 0px;
-	transition: all 0.4s;
-	-webkit-transition: all 0.4s;
+  font-family: Lato;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #666666;
+  margin: 0px;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
 }
 
 a:focus {
-	outline: none !important;
+  outline: none !important;
 }
 
 a:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 /*---------------------------------------------*/
-h1,h2,h3,h4,h5,h6 {
-	margin: 0px;
-  margin-top:10px;
-  margin-bottom :10px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 p {
-	font-family: Poppins-Regular;
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 0px;
+  font-family: Poppins-Regular;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #666666;
+  margin: 0px;
 }
 
-ul, li {
-	margin: 0px;
-	list-style-type: none;
+ul,
+li {
+  margin: 0px;
+  list-style-type: none;
 }
 
 
 /*---------------------------------------------*/
 input {
-	outline: none;
-	border: none;
+  outline: none;
+  border: none;
 }
 
 input[type="number"] {
-    -moz-appearance: textfield;
-    appearance: none;
-    -webkit-appearance: none;
+  -moz-appearance: textfield;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 textarea {
@@ -84,43 +87,88 @@ textarea {
   border: none;
 }
 
-textarea:focus, input:focus {
+textarea:focus,
+input:focus {
   border-color: transparent !important;
 }
 
-input:focus::-webkit-input-placeholder { color:transparent; }
-input:focus:-moz-placeholder { color:transparent; }
-input:focus::-moz-placeholder { color:transparent; }
-input:focus:-ms-input-placeholder { color:transparent; }
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
 
-textarea:focus::-webkit-input-placeholder { color:transparent; }
-textarea:focus:-moz-placeholder { color:transparent; }
-textarea:focus::-moz-placeholder { color:transparent; }
-textarea:focus:-ms-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder {
+  color: transparent;
+}
 
-input::-webkit-input-placeholder {color: #cccccc;}
-input:-moz-placeholder {color: #cccccc;}
-input::-moz-placeholder {color: #cccccc;}
-input:-ms-input-placeholder {color: #cccccc;}
+input:focus::-moz-placeholder {
+  color: transparent;
+}
 
-textarea::-webkit-input-placeholder {color: #cccccc;}
-textarea:-moz-placeholder {color: #cccccc;}
-textarea::-moz-placeholder {color: #cccccc;}
-textarea:-ms-input-placeholder {color: #cccccc;}
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+textarea:focus:-moz-placeholder {
+  color: transparent;
+}
+
+textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+
+textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+input::-webkit-input-placeholder {
+  color: #cccccc;
+}
+
+input:-moz-placeholder {
+  color: #cccccc;
+}
+
+input::-moz-placeholder {
+  color: #cccccc;
+}
+
+input:-ms-input-placeholder {
+  color: #cccccc;
+}
+
+textarea::-webkit-input-placeholder {
+  color: #cccccc;
+}
+
+textarea:-moz-placeholder {
+  color: #cccccc;
+}
+
+textarea::-moz-placeholder {
+  color: #cccccc;
+}
+
+textarea:-ms-input-placeholder {
+  color: #cccccc;
+}
 
 /*---------------------------------------------*/
 button {
-	outline: none !important;
-	border: none;
-	background: transparent;
+  outline: none !important;
+  border: none;
+  background: transparent;
 }
 
 button:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 iframe {
-	border: none !important;
+  border: none !important;
 }
 
 
@@ -129,7 +177,7 @@ iframe {
 [ Contact ]*/
 
 .container-contact100 {
-  width: 100%;  
+  width: 100%;
   min-height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
@@ -184,16 +232,16 @@ iframe {
 }
 
 .contact100-form-title {
-      display: block;
-    width: 100%;
-    font-size: 39px;
-    color: #333333;
-    line-height: 1.2;
-    text-align: left;
-    padding-bottom: 10px;
-    text-align: center;
-    border-bottom: 2px dashed;
-    margin-bottom: 9px;
+  display: block;
+  width: 100%;
+  font-size: 39px;
+  color: #333333;
+  line-height: 1.2;
+  text-align: left;
+  padding-bottom: 10px;
+  text-align: center;
+  border-bottom: 2px dashed;
+  margin-bottom: 9px;
 }
 
 
@@ -270,11 +318,11 @@ textarea.input100 {
 }
 
 
-.input100:focus + .focus-input100::before {
+.input100:focus+.focus-input100::before {
   width: 100%;
 }
 
-.has-val.input100 + .focus-input100::before {
+.has-val.input100+.focus-input100::before {
   width: 100%;
 }
 
@@ -425,21 +473,21 @@ textarea.input100 {
 
 /*start ------------- for radio button styles*/
 
-ul li{
+ul li {
   display: block;
   position: relative;
   float: left;
- /* width: 100%;*/
+  /* width: 100%;*/
   height: 100px;
 
 }
 
-ul li input[type=radio]{
+ul li input[type=radio] {
   position: absolute;
   visibility: hidden;
 }
 
-ul li label{
+ul li label {
   display: block;
   position: relative;
   font-weight: 300;
@@ -452,11 +500,11 @@ ul li label{
   -webkit-transition: all 0.25s linear;
 }
 
-ul li:hover label{
+ul li:hover label {
   color: #7e4240;
 }
 
-ul li .check{
+ul li .check {
   display: block;
   position: absolute;
   border: 5px solid;
@@ -488,32 +536,75 @@ ul li .check::before {
   -webkit-transition: background 0.25s linear;
 }
 
-input[type=radio]:checked ~ .check {
+input[type=radio]:checked~.check {
   border: 5px solid #d5ae3a;
 }
 
-input[type=radio]:checked ~ .check::before{
+input[type=radio]:checked~.check::before {
   background: #d5ae3a;
 }
 
-input[type=radio]:checked ~ label{
+input[type=radio]:checked~label {
   color: #d5ae3a;
 }
+
 .type {
-  float: left ;
+  float: left;
 }
-  /*-------------- end style radio button */
 
-  /*Don gia */
-  .dongia {
-    padding: 9px;
-    background: #e7cc5c;
-    border-radius: 10px;
+/*-------------- end style radio button */
+
+/*Don gia */
+.dongia {
+  padding: 9px;
+  background: #e7cc5c;
+  border-radius: 10px;
+}
+
+/* End don gia   */
+
+/*div thanh tien*/
+#divThanhTien {
+  display: none;
+}
+
+.hoa-don-ne {
+  background: rgb(245, 173, 205);
+  color: #076ABA;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid #076ABA !important;
+  text-align: center;
+}
+
+.hoa-don-ne tr th {
+  text-align: center;
+  font-weight: bolder;
+}
+
+.hoa-don-ne tr:last-of-type td {
+  text-align: right;
+  font-weight: bolder;
+}
+
+.hoa-don-ne td {
+  border: 1px solid #076ABA;
+  font-weight: 500;
+}
+
+.hoa-don-ne thead th {
+  border-bottom: 0;
+}
+
+/* End div thanh tien */
+
+@media print {
+
+  .container-contact100 {
+    display: none;
   }
- /* End don gia   */
 
- /*div thanh tien*/
- #divThanhTien{
-  display: none ;
- }
- /* End div thanh tien */
+  @page {
+    size: landscape;
+  }
+
+}

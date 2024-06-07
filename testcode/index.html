@@ -16,29 +16,109 @@
 
 
     <style>
-        * {
-            box-sizing: border-box;
+        /* Tạo Hiệu ứng backgroud chạy gradient trong phần tử  */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #333;
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
 
-        .main {
-            width: 200px;
-            height: 200px;
-            background-color: palevioletred;
-            padding: 10px;
+        .glowing-border {
+            position: relative;
+            padding: 20px 40px;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            background-clip: padding-box;
+            color: #fff;
+            font-size: 1.5em;
         }
 
-        .main h2 {
-            text-align: right;
-            font-size: 16px;
+        .glowing-border::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-radius: 8px;
+            border: 2px solid transparent;
+            background: linear-gradient(90deg, rgba(255, 0, 0, 0), rgba(255, 255, 0, 0.5), rgba(255, 0, 0, 0));
+            background-size: 200% 200%;
         }
 
-        .main h2::after {
-            content: "";
-            height: 5px;
-            width: 100%;
-            background-color: black;
-            margin-top: 10px;
+        .glowing-border:hover::before {
+            animation: glowing 2s ease;
+        }
 
+        @keyframes glowing {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            25% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0%;
+            }
+        }
+
+        /* HIệu úng đường viền chạy xung quanh */
+        .bb::before,
+        .bb::after {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .bb {
+            width: 644px;
+            height: 113px;
+            margin: auto;
+            color: #69ca62;
+            box-shadow: inset 0 0 0 1px rgba(105, 202, 98, .5);
+            position: relative;
+        }
+
+        .bb::before,
+        .bb::after {
+            content: '';
+            z-index: -1;
+            /* margin: -5%; */
+            box-shadow: inset 0 0 0 2px;
+            animation: clipMe 8s linear forwards;
+
+        }
+
+        .bb::before {
+            animation-delay: -4s;
+        }
+
+        @keyframes clipMe {
+
+            0%,
+            100% {
+                clip: rect(0px, 644px, 2px, 0px);
+            }
+
+            25% {
+                clip: rect(0px, 2px, 113px, 0px);
+            }
+
+            50% {
+                clip: rect(113px, 644px, 644px, 0px);
+            }
+
+            75% {
+                clip: rect(2px, 644px, 113px, 644px);
+            }
         }
     </style>
 </head>
@@ -48,11 +128,30 @@
         <!-- place navbar here -->
     </header>
     <main>
-        <div class="container-fluid">
-            <div class="row">
-                
+        <!-- Tạo Hiệu ứng backgroud chạy gradient trong phần tử -->
+        <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="glowing-border">Hello, World!
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- HIệu úng đường viền chạy xung quanh  -->
+
+        <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="bb"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
     </main>
     <footer>
