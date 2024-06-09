@@ -59,14 +59,12 @@ document.getElementById("frmBaiTap3").onsubmit = function (event) {
     event.target.reset();
 }
 
-//Bài tạp 4 - Tính diện tích chu vi 
 function quyDoiTien(tienCanQuyDoi) {
     let tienDaQuyDoi = parseInt(tienCanQuyDoi * TYGIAUSD);
     return tienDaQuyDoi;
 }
 
-
-// Bài tập 4
+//Bài tạp 4 - Tính diện tích chu vi 
 
 const DIENTICH = "dienTich";
 const CHUVI = "chuVi";
@@ -131,6 +129,7 @@ document.getElementById("frmBaiTap5").onsubmit = function (event) {
     else (
         htmlKySo.innerHTML = "Bạn vừa nhập số lớn hơn hoặc nhỏ hơn 2 chữ số"
     )
+    event.target.reset();
 }
 
 
