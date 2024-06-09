@@ -1,24 +1,34 @@
 
-
 window.onload = function () {
     document.querySelector(".block_item:last-child").classList.add("light-way");
 }
+
+function giaoDienTrang() {
+
+    let kq = document.querySelector(".kq");
+    let xoayXoay = document.querySelector(".shuriken");
+    xoayXoay.classList.add("xoay");
+    xoayXoay.style.background = "white";
+    kq.style.border = "2px dashed white";
+}
+
+
 
 //Bài Tập 1
 document.getElementById("frmBaiTap1").onsubmit = function (event) {
     // console.log("Ta la nut tinh luong");
     event.preventDefault();
-
     let luong1Ngay = document.getElementById("luong1Ngay").value;
     let soNgayLam = document.getElementById("soNgayLam").value;
     let soTienLuong = document.getElementById("soTienLuong");
-    let xoayXoay = document.querySelector(".shuriken");
-    let kq = document.querySelector(".kq")
-    soTienLuong.innerHTML = tinhTienLuong(luong1Ngay, soNgayLam);
-    xoayXoay.classList.add("xoay");
-    xoayXoay.style.background = "white";
-    kq.style.border = "2px dashed white";
-    event.target.reset();
+    if (luong1Ngay <= 0 || soNgayLam <= 0) {
+        alert("Bạn chưa nhập liệu");
+    }
+    else {
+        soTienLuong.innerHTML = tinhTienLuong(luong1Ngay, soNgayLam);
+        giaoDienTrang();
+        event.target.reset();
+    }
 }
 
 function tinhTienLuong(luong1Ngay, soNgayLam) {
@@ -36,9 +46,15 @@ document.getElementById("frmBaiTap2").onsubmit = function (event) {
     let soThuTu = document.getElementById("soThuTu").value * 1;
     let soThuNam = document.getElementById("soThuNam").value * 1;
     let trungBinh = document.getElementById("trungBinhCong");
-    console.log(trungBinh);
-    trungBinh.innerHTML = trungBinhCong(soThuNhat, soThuHai, soThuBa, soThuTu, soThuNam);
-    event.target.reset();
+    if (soThuNhat <= 0 || soThuHai <= 0 || soThuBa <= 0 || soThuTu <= 0 || soThuNam <= 0) {
+        alert("Bạn chưa nhập liệu!");
+    }
+    else {
+        trungBinh.innerHTML = trungBinhCong(soThuNhat, soThuHai, soThuBa, soThuTu, soThuNam);
+        event.target.reset();
+    }
+
+
 }
 
 function trungBinhCong(soThuNhat, soThuHai, soThuBa, soThuTu, soThuNam) {
@@ -52,11 +68,17 @@ document.getElementById("frmBaiTap3").onsubmit = function (event) {
     event.preventDefault();
     let tienCanQuyDoi = document.getElementById("tienCanQuyDoi").value * 1;
     let theHtml = document.getElementById("soTienQuyDoi");
-    theHtml.innerHTML = quyDoiTien(tienCanQuyDoi).toLocaleString("vi", {
-        style: "currency",
-        currency: "VND",
-    });
-    event.target.reset();
+    if (tienCanQuyDoi <= 0) {
+
+        alert("bạn chưa nhập liệu");
+    }
+    else {
+        theHtml.innerHTML = quyDoiTien(tienCanQuyDoi).toLocaleString("vi", {
+            style: "currency",
+            currency: "VND",
+        });
+        event.target.reset();
+    }
 }
 
 function quyDoiTien(tienCanQuyDoi) {

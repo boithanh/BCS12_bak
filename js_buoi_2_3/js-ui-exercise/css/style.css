@@ -152,7 +152,7 @@ body {
 
 
 .kq p {
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: black;
     font-weight: bolder;
     line-height: 0;
@@ -257,7 +257,7 @@ body {
     }
 
     to {
-        transform: rotate(360deg);
+        transform: rotate(720deg);
     }
 }
 

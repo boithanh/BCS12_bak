@@ -8,7 +8,7 @@
 
 body {
     /* background-image: linear-gradient(to left, #fc5c7d, #6a82fb); */
-    background-image: linear-gradient(to bottom, #FFE998, #57370D);
+    background-image: linear-gradient(to top, #FFE998, #57370D);
     /* background-image: linear-gradient(to left, #EECC51, #203C58); */
     /* background-image: linear-gradient(to right, #FDABDD, #374A5A); */
     /* background-image: linear-gradient(to bottom, #18A5A7, #B6C0C5); */
@@ -146,7 +146,7 @@ body {
             rgba(255, 255, 255, 0.3) 100%);
     top: 0;
     transform: skewX(-25deg);
-    animation: anhsangcuuthe 3s forwards;
+    animation: anhsangcuuthe 2s forwards;
     overflow: hidden;
 }
 
@@ -161,7 +161,7 @@ body {
 }
 
 .kq p {
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: black;
     font-weight: bolder;
     line-height: 0;
@@ -238,7 +238,7 @@ body {
 @media screen and (max-width:430px) {
 
     body {
-        background-image: linear-gradient(to left, #FFE998, #57370D)
+        background-image: linear-gradient(to bottom, #FFE998, #57370D)
     }
 
 
@@ -267,17 +267,17 @@ body {
     }
 
     to {
-        transform: rotate(360deg);
+        transform: rotate(720deg);
     }
 }
 
 @keyframes anhsangcuuthe {
     from {
 
-        left: -100%;
+        right: -100%;
     }
 
     to {
-        left: 125%;
+        right: 125%;
     }
 }

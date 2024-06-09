@@ -4,6 +4,15 @@ window.onload = function () {
     inputKetNoi.style.display = "none";
 }
 
+function giaoDienTrang() {
+
+    let kq = document.querySelector(".kq");
+    let xoayXoay = document.querySelector(".shuriken");
+    xoayXoay.classList.add("xoay");
+    xoayXoay.style.background = "black";
+    kq.style.border = "2px dashed black";
+}
+
 
 // Bài 1 - Quản lý tuyển sinh
 
@@ -16,12 +25,7 @@ document.getElementById("btnKetQua").onclick = function () {
     let diemMon3 = document.getElementById("diemMon3").value * 1;
     let khuVuc = document.getElementById("selectKhuVuc").value * 1;
     let doiTuong = document.getElementById("selectDoiTuong").value * 1;
-    let xoayXoay = document.querySelector(".shuriken");
     let kq = document.querySelector(".kq")
-    xoayXoay.classList.add("xoay");
-    xoayXoay.style.background = "black";
-    kq.style.border = "2px dashed black";
-    console.log(doiTuong);
     let ketQuaThi = document.getElementById("ketQuaThi");
     let tongDiem = 0;
 
@@ -39,6 +43,7 @@ document.getElementById("btnKetQua").onclick = function () {
             ketQuaThi.innerHTML = `Bạn đã rớt. huhu. Tổng điểm: ${tongDiem}`;
         }
     }
+    giaoDienTrang();
 }
 
 //Bài 2 - Tính Số KW
@@ -160,8 +165,7 @@ document.getElementById("frmBaiTap3").onsubmit = function (event) {
         tongTienThue = thuNhapChiuThue * THUNHAPTREN960;
         kqTienThue.innerHTML = `Họ Tên: ${hoTenThue}; ` + `Tiền thuế thu nhập cá nhân: ` + new Intl.NumberFormat('vi', { style: 'currency', currency: 'VND' }).format(tongTienThue);
     }
-    // event.target.reset();
-    console.log(formatDataInput(tnn));
+    event.target.reset();
 }
 //Bài 4 - Tính tiền cáp
 
