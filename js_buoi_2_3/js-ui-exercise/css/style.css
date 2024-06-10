@@ -223,6 +223,10 @@ body {
         /* margin: 100% auto; */
     }
 
+    .kq p {
+        font-size: 1rem;
+    }
+
 }
 
 @media screen and (max-width:430px) {
@@ -245,6 +249,10 @@ body {
         transition: all 0.5s;
         font-family: "Pacifico", cursive;
         font-size: 0.75rem;
+    }
+
+    .kq p {
+        font-size: .5rem;
     }
 
 }
