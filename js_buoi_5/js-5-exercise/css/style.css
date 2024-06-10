@@ -238,7 +238,7 @@ body {
 @media screen and (max-width:430px) {
 
     body {
-        background-image: linear-gradient(to bottom, #FFE998, #57370D)
+        background-image: linear-gradient(to top, #FFE998, #57370D)
     }
 
 
