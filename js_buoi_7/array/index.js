@@ -38,7 +38,6 @@ document.querySelector(".btn-success").onclick = () => {
         }
     }
     console.log(dem);
-
 };
 
 //Phương thức indexOf và lastIndexOF
@@ -62,8 +61,8 @@ for (let i = 0; i < danhSachSinhVien; i++) {
 console.log(vitriNguyen);
 
 
-
 let viTriVan = -1;
+for (let i = doDaiMang - 1; i >= 0; i--) {
 for (let i = doDaiMang - 1; i >= 0; i--) {
     if (danhSachSinhVien[i] == "Vân") {
         viTriVan = i;
