@@ -678,12 +678,12 @@ let content2="";
 arrNguoiDung.forEach((item,index)=>{
   let {taiKhoan, hoTen,email,maLoaiNguoiDung}=item;
   content2+=`<tr>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>${taiKhoan}</td>
+              <td>${hoTen}</td>
+              <td>${maLoaiNguoiDung}</td>
               <td></td>
             </tr>
             `
-})
+});
 
 document.getElementById("abc").innerHTML=content2;
