@@ -64,10 +64,15 @@ console.log(vitriNguyen);
 
 
 let viTriVan = -1;
-for (let i = doDaimang - 1; i >= 0; i--) {
+for (let i = doDaiMang - 1; i >= 0; i--) {
     if (danhSachSinhVien[i] == "Vân") {
         viTriVan = i;
         break;
     }
 }
 console.log(viTriVan);
+
+
+let a=document.querySelectorAll("#baiTap1 input #baiTap2 button");
+
+console.log(a);
