@@ -9,35 +9,33 @@ let doDaiMang = danhSachSinhVien.length;
 // danhSachSinhVien[4] = "Bích";
 // console.log(danhSachSinhVien);
 
-
 let arrNumber = [1, 8, 4, 9];
 document.querySelector(".btn-dark").onclick = () => {
-    let soN = document.getElementById("soN").value * 1;
-    arrNumber.push(soN);
-    // Đưa kq lên giao diện
-    document.getElementById("ketQua1").innerHTML = arrNumber;
+  let soN = document.getElementById("soN").value * 1;
+  arrNumber.push(soN);
+  // Đưa kq lên giao diện
+  document.getElementById("ketQua1").innerHTML = arrNumber;
 
-    //Demo phương thức pop
-    // let phanTuCuoiMang = arrNumber.pop();
-    // console.log(phanTuCuoiMang);
-    // console.log(arrNumber);
-
-}
+  //Demo phương thức pop
+  // let phanTuCuoiMang = arrNumber.pop();
+  // console.log(phanTuCuoiMang);
+  // console.log(arrNumber);
+};
 
 document.querySelector(".btn-success").onclick = () => {
-    let tong = 0;
-    let dem = 0;
-    // for (let i = 0; i < arrNumber; i++) {
-    //     tong += arrNumber[i];
+  let tong = 0;
+  let dem = 0;
+  // for (let i = 0; i < arrNumber; i++) {
+  //     tong += arrNumber[i];
 
-    //     console.log(tong);
-    // }
-    for (let i = 0; i < arrNumber; i++) {
-        if (arrNumber[i] % 2 == 0) {
-            dem++;
-        }
+  //     console.log(tong);
+  // }
+  for (let i = 0; i < arrNumber; i++) {
+    if (arrNumber[i] % 2 == 0) {
+      dem++;
     }
-    console.log(dem);
+  }
+  console.log(dem);
 };
 
 //Phương thức indexOf và lastIndexOF
@@ -49,29 +47,31 @@ document.querySelector(".btn-success").onclick = () => {
 // let viTriVan = danhSachSinhVien.lastIndexOf("Vân");
 // console.log(viTriVan);
 
-
 // TRong mảng phần từ ko có mặc định có giá trị -1, nếu tìm ko thấy sẽ trả về -1
 let vitriNguyen = -1;
 for (let i = 0; i < danhSachSinhVien; i++) {
-    if (danhSachSinhVien[i] == "Nguyên") {
-        vitriNguyen = i;
-        break; //Có break để khi tìm kiếm thấy giá trị cần tìm sẽ ngưng lại luôn, ko chạy tiếp nửa.
-    }
+  if (danhSachSinhVien[i] == "Nguyên") {
+    vitriNguyen = i;
+    break; //Có break để khi tìm kiếm thấy giá trị cần tìm sẽ ngưng lại luôn, ko chạy tiếp nửa.
+  }
 }
 console.log(vitriNguyen);
 
-
 let viTriVan = -1;
 for (let i = doDaiMang - 1; i >= 0; i--) {
-for (let i = doDaiMang - 1; i >= 0; i--) {
-    if (danhSachSinhVien[i] == "Vân") {
-        viTriVan = i;
-        break;
-    }
+  if (danhSachSinhVien[i] == "Vân") {
+    viTriVan = i;
+    break;
+  }
 }
 console.log(viTriVan);
 
-
-let a=document.querySelectorAll("#baiTap1 input #baiTap2 button");
-
-console.log(a);
+document.querySelector(".btn-dark").onclick = () => {
+  let mangInput = document.querySelectorAll(
+    "#baiTap1 input, #baiTap2 input, #baiTap1 button, #baiTap2 button"
+  );
+  let soN = mangInput[0].value * 1;
+  let maSinhVien = mangInput[3].value;
+  let tenSinhVien = mangInput[4].value;
+  console.log(soN);
+};
