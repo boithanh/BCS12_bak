@@ -686,3 +686,154 @@ arrNguoiDung.forEach((item, index) => {
 });
 
 document.getElementById("abc").innerHTML = content2;
+
+// Object Literal
+let hoten = "Sun Nguyễn";
+let sinhVienNam = {
+  namSinh: 2002,
+  // hotenNam: hoten, ES5 trở về trước
+  hoten, // Có thể khai báo bên ngoài và gọi thẳng vào object (Chỉ có ở ES6) tránh dư thừa khi khởi tạo hay truyefn biến
+};
+console.log(sinhVienNam);
+
+// callBack function (hàm gọi lại)
+function tinhDiemTrungBinh(chucNang) {
+  let diemToan = 9;
+  let diemLy = 7;
+  let diemHoa = 5;
+  let diemTrungBinh = (diemHoa + diemLy + diemToan) / 3;
+  chucNang(tinhDiemTrungBinh);
+}
+
+function xepLoaiSinhVien(diemTrungBinh) {
+  if (diemTrungBinh > 7) {
+    console.log("sinh viên giỏi");
+  } else {
+    console.log("Sinh viên khá");
+  }
+}
+
+// tinhDiemTrungBinh(() => {
+//   console.log("DO nGOC");
+// });
+
+tinhDiemTrungBinh(xepLoaiSinhVien);
+tinhDiemTrungBinh(hienThiTrungBinh);
+
+function hienThiTrungBinh(diemTrungBinh) {
+  console.log(`Điểm của thí sính là: ${diemTrungBinh}`);
+}
+
+let arrDienVien = [
+  "phuong trang",
+  "Lệ Tổ",
+  "Huỳnh Trần",
+  "Vỉnh bảo",
+  "Thu Trang",
+];
+
+//tạo ra một function giống hàm map
+function fakeMap(chucNang) {
+  let newArrDienVien = [];
+  for (let i = 0; i <= arrDienVien.length; i++) {
+    // chucNang(arrDienVien[i], i);
+    let newDienVien = chucNang(arrDienVien[i], i);
+    newArrDienVien.push(newDienVien);
+  }
+  return newArrDienVien;
+}
+
+let newArr = fakeMap((item, index) => {
+  // console.log(item);
+  // console.log(index);
+  return `diễn viên ${item}`;
+});
+console.log(newArr);
+// let chucNang = function () {};
+
+let arrChampion = [
+  {
+    hoTen: "Garden",
+    tanCong: 93,
+    giap: 55,
+    khangPhep: 40,
+  },
+  {
+    hoTen: "Kaisa",
+    tanCong: 80,
+    giap: 30,
+    khangPhep: 35,
+  },
+  {
+    hoTen: "Jhin",
+    tanCong: 109,
+    giap: 35,
+    khangPhep: 30,
+  },
+  {
+    hoTen: "Aatrox",
+    tanCong: 85,
+    giap: 40,
+    khangPhep: 25,
+  },
+];
+
+//Yêu cầu: Tạo ra 1 hàm fakeFilter với công dụng sẽ kiểm tra mảng arrChampion và trả về kết quả dựa trên mong muốn của người dùng
+//Với hàm fakeFilter sẽ có một tham số là callback function và tham số đó sẽ nhận vào các hàm được cung cấp bến dưới
+
+function kiemTraTanCong(item, index) {
+  //Kiểm tra tấn công trên 80 thì sẽ nhận vào mảng mởi
+  return item.tanCong > 80;
+}
+function kiemTraKhangPhep(item, index) {
+  // Kiểm tra nếu kháng phép lớn hơn 30 thì sẽ nhận vào mảng mới
+}
+
+function fakeFilter(chucNang) {
+  let newArrChampion = [];
+  for (let index in arrChampion) {
+    // let newChampion = chucNang(arrChampion[i], i);
+    // newArrChampion.push(newChampion);
+    let isValid = chucNang(arrChampion[index], index);
+    if (isValid) {
+      newArrChampion.push(arrChampion[index]);
+    }
+  }
+  return newArrChampion;
+}
+
+let newArrChampion = fakeFilter(kiemTraTanCong);
+console.log(newArrChampion);
+
+let newArrChampion2 = fakeFilter(kiemTraKhangPhep);
+console.log(newArrChampion2);
+
+//Lớp Đối tượng OOP
+//tenXe, loaiXe, giaTien, mauSac
+//(ở ES6 khởi tạo đối tượng là class), còn ES5 thì là function để tạo lớp đối tượng
+class XeHoi {
+  //thuộc tính
+  tenXe = "Merc 5880";
+  loaiXe = "S class";
+  giaTien = 12000;
+  mauSac = "Đen huyền";
+  //hàm khởi tạo
+  constructor(tenXe, loaiXe, giaTien, mauSac) {
+    console.log(tenXe);
+    this.tenXe = tenXe; // Dùng để truyền tên xe mới vào đối tượng
+    this.loaiXe = loaiXe;
+    this.giaTien = giaTien;
+    this.mauSac = mauSac;
+  }
+
+  //Phương thức
+  hienThiThongSoXe = function () {
+    console.log(
+      `Xe${this.tenXe}thuộc loại ${this.loaiXe} có giá ${this.giaTien}$ và còn màu ${this.mauSac}`
+    );
+  };
+}
+
+let xeS680 = new XeHoi("G63", "E-class", 300000, "trắng");
+console.log(xeS680);
+xeS680.hienThiThongSoXe();
