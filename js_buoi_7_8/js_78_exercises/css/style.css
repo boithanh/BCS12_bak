@@ -8,7 +8,7 @@
 
 body {
   background-image: url("../img/tree_lanscape.jpg");
-  height: 100vh;
+  height: 100%;
   background-size: cover;
   background-position: bottom;
 }
@@ -30,8 +30,9 @@ body {
 
 .blockbaitap .content_block {
   width: 69vw;
-  height: 85vh;
-  margin: 7vh auto;
+  /* height: 85vh; */
+  height: 100%;
+  /* margin: 7vh auto; */
 }
 
 .blockbaitap .block_item {
@@ -112,7 +113,11 @@ body {
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.blockbaitap .kq2 {
+.blockbaitap .kq2,
+.blockbaitap .kq3,
+.blockbaitap .kq4,
+.blockbaitap .kq5,
+.blockbaitap .kq6 {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -174,7 +179,11 @@ body {
 }
 
 .kq p,
-.kq2 p {
+.kq2 p,
+.kq3 p,
+.kq4 p,
+.kq5 p,
+.kq6 p {
   font-size: 1.3rem;
   color: black;
   font-weight: bolder;
