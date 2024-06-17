@@ -165,13 +165,13 @@ body {
 }
 
 .blockbaitap .kq2 p i {
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
 }
 
 .blockbaitap .kq p i {
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: radial-gradient(circle farthest-side, #fceabb, #f8b500);
   background-position: left right;
