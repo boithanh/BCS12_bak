@@ -7,10 +7,18 @@
 }
 
 body {
-  background-image: url("../img/tree_lanscape.jpg");
+  /* background-image: url("../img/tree_lanscape.jpg"); */
+  /* background-image: linear-gradient(to left, #fc5c7d, #6a82fb); */
+  /* background-image: linear-gradient(to bottom, #FFE998, #57370D); */
+  /* background-image: linear-gradient(to left, #EECC51, #203C58); */
+  background-image: linear-gradient(to right, #FDABDD, #374A5A);
+  /* background-image: linear-gradient(to bottom, #18A5A7, #B6C0C5); */
+  /* background-image: linear-gradient(to top, #112D60, #DD83E0); */
+
   height: 100%;
   background-size: cover;
   background-position: bottom;
+  background-repeat: no-repeat;
 }
 
 .pacifico-regular {
@@ -21,6 +29,10 @@ body {
 
 .blockbaitap {
   overflow: hidden;
+}
+
+.blockbaitap ul li {
+  color: black;
 }
 
 .blockbaitap h2 {
@@ -46,10 +58,10 @@ body {
   transition: all 1s;
 }
 
-.blockbaitap .block_item:hover {
+/* .blockbaitap .block_item:hover {
   background: rgba(255, 255, 255, 0.5);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.9);
-}
+} */
 
 .blockbaitap input,
 .blockbaitap select {
@@ -113,11 +125,8 @@ body {
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.blockbaitap .kq2,
-.blockbaitap .kq3,
-.blockbaitap .kq4,
-.blockbaitap .kq5,
-.blockbaitap .kq6 {
+.blockbaitap .kq,
+.blockbaitap .kq2 {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -129,6 +138,16 @@ body {
   text-align: center;
   border-radius: 15px;
   position: relative;
+}
+
+.blockbaitap .kq p,
+.blockbaitap .kq2 p {
+  font-size: 1.3rem;
+  color: black;
+  font-weight: bolder;
+  line-height: 0;
+  font-family: "Pacifico", cursive;
+  margin: auto;
 }
 
 .blockbaitap .block_item::before .card-body {
@@ -145,16 +164,18 @@ body {
   background-color: white;
 }
 
-.blockbaitap .kq p i {
+.blockbaitap .kq2 p i {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
 }
 
-.blockbaitap .kq2 p i {
+.blockbaitap .kq p i {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: radial-gradient(circle farthest-side, #fceabb, #f8b500);
+  background-position: left right;
+  transition: all 1s ease;
 }
 
 .blockbaitap .block_item {
@@ -167,47 +188,30 @@ body {
   height: 100%;
   position: absolute;
   display: block;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.3) 100%
-  );
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.3) 100%);
   top: 0;
   transform: skewX(-25deg);
   animation: anhsangcuuthe 3s forwards;
   overflow: hidden;
 }
 
-.kq p,
-.kq2 p,
-.kq3 p,
-.kq4 p,
-.kq5 p,
-.kq6 p {
-  font-size: 1.3rem;
-  color: black;
-  font-weight: bolder;
-  line-height: 0;
-  font-family: "Pacifico", cursive;
-  margin: auto;
-}
 
 .shuriken {
   position: absolute;
-  clip-path: polygon(
-    2% 8%,
-    45% 20%,
-    55% 39%,
-    95% 0,
-    84% 49%,
-    62% 51%,
-    100% 95%,
-    51% 78%,
-    50% 60%,
-    6% 100%,
-    15% 57%,
-    42% 49%
-  );
+  clip-path: polygon(2% 8%,
+      45% 20%,
+      55% 39%,
+      95% 0,
+      84% 49%,
+      62% 51%,
+      100% 95%,
+      51% 78%,
+      50% 60%,
+      6% 100%,
+      15% 57%,
+      42% 49%);
   width: 50px;
   height: 50px;
   background: transparent;
