@@ -10,6 +10,6 @@ class SinhVien {
   txtDiemHoa = "";
   // Phương thức
   tinhDiemTrungBinh = function () {
-    return (this.txtDiemToan + this.txtDiemLy + this.txtDiemHoa) / 3;
+    return (this.txtDiemToan * 1 + this.txtDiemLy * 1 + this.txtDiemHoa * 1) / 3;
   };
 }
