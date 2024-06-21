@@ -9,13 +9,31 @@
  * Tìm kiếm sinh viên
  *
  */
-// Thêm Sinh Viên
+
+function hienThiThongBao(text, duration, className) {
+
+  Toastify({
+    text,
+    className,
+    duration,
+    // destination: "https://github.com/apvarun/toastify-js",
+    // newWindow: true,
+    close: true,
+    gravity: "top", // `top` or `bottom`
+    position: "left", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    // style: {
+    //   // background: "linear-gradient(to right, #00b09b, #96c93d)",
+    //   background: "red",
+    // },
+    backgroundColor: "orange",
+  }).showToast();
+}
+
 let formSV = document.getElementById("formQLSV");
 let arrSinhVien = getLocalStorage();
-renderArrSinhVien();
-formSV.onsubmit = function (event) {
-  event.preventDefault();
-  // console.log("tô là submit");
+
+function getValueSinhVien() {
   let arrField = document.querySelectorAll("#formQLSV input, #formQLSV select");
   //   console.log(arrField);
   //Khởi tạo một đối tượng, từ lớp đối tượng sinh viên 
@@ -26,11 +44,25 @@ formSV.onsubmit = function (event) {
     let { value, id } = field;
     sinhVien[id] = value;
   }
+  return sinhVien;
+}
+
+//*************Tối ưu
+//hàm rendersinhvien và saveLocal stograte sử dụng  nhiều, có thể tạo 1 hàm mới đồng bộ dữ liệu để thực hien
+
+// Thêm Sinh Viên
+
+renderArrSinhVien();
+formSV.onsubmit = function (event) {
+  event.preventDefault();
+  // console.log("tô là submit");
+  let sinhVien = getValueSinhVien();
   arrSinhVien.push(sinhVien);
   //Lưu trữ mảng đã được thêm một phần tử mới vào localStorage
   saveLocalStorage();
   // console.log(arrSinhVien);
   renderArrSinhVien(arrSinhVien);
+  hienThiThongBao("Thêm sinh viên thành công", 3000, "bg-success");
   //Phwuong thức reset
   formSV.reset();
 };
@@ -45,7 +77,7 @@ function renderArrSinhVien(arr = arrSinhVien) {
     Object.assign(newSinhVien, sinhVien)
     //destructuring
     let { txtEmail, txtMaSV, txtNgaySinh, txtTenSV, khSV } = sinhVien;
-    console.log(newSinhVien);
+    // console.log(newSinhVien);
     let diemTrungBinh = newSinhVien.tinhDiemTrungBinh();
     content += `<tr>
               <td>${txtMaSV}</td>
@@ -54,11 +86,12 @@ function renderArrSinhVien(arr = arrSinhVien) {
               <td>${txtNgaySinh}</td>
               <td>${khSV}</td>
               <td>${diemTrungBinh.toFixed(2)}</td>
-              <td><button></button></td>
-              <td></td>
+              <td> <button onclick="deleteSinhVien('${txtMaSV}')" class="btn btn-warning">Xoa</button></td>
+              <td><button onclick="getInfoSinhVien('${txtMaSV}')" class="btn btn-dark">Sua</button></td>
               
             </tr>
             `
+    //Chỗ này lưu ý: Phần biến txtMaSV khi gán vào theo phương thức này  phải thêm dấu nháy đơn bao xung quanh để nó biết đó là biến vì phía ngoài đã có dấu kép, nó sẽ tưởng là chuỗi bth --> Báo lỗi hàm
     // sau khi bốc tách thì thay thế sinhvien.txtmaSV thành ddooois tượng txtsV
   }
   document.getElementById("tbodySinhVien").innerHTML = content;
@@ -82,6 +115,96 @@ function getLocalStorage(key = "arrSinhVien") {
   // if (newDatalocal) { arrSinhVien = newDatalocal; }
   return newDatalocal ? newDatalocal : [];
 }
+
+function deleteSinhVien(masv) {
+  // console.log(sv.masv);
+  //Tìm kiếm vị trí index của phần tử cần xóa
+  //Sử dụng hàm splice  để xóa phần tử khỏi mảng
+  let index = arrSinhVien.findIndex((item, index) => {
+    //Object
+    return item.txtMaSV == masv;
+  });
+  if (index != -1) {
+    arrSinhVien.splice(index, 1);
+    renderArrSinhVien();
+    saveLocalStorage();
+  }
+  console.log(arrSinhVien);
+}
+
+//Lấy thông tin sinh viên
+function getInfoSinhVien(masv) {
+  console.log(masv);
+  //let sinhVien=> find
+  //Đưa dữ liệu lên các input của form
+  let sinhVien = arrSinhVien.find((item, index) => {
+    //Object
+    return item.txtMaSV == masv;
+  });
+  if (sinhVien) {
+    //Thao tác đưa dữ liệu lên giao diện  (cụ thể là Các Input)
+    let arrField = document.querySelectorAll("#formQLSV input, #formQLSV select");
+    // console.log(arrField);
+    for (let item of arrField) {
+      let { id } = item; //txtmaSv
+      item.value = sinhVien[id];
+
+      if (id == "txtMaSV") {
+        item.readOnly = true;
+      }
+    }
+  };
+}
+// Cập nhật sinh viên
+//Thực hiện tạo một lệnh DOM tới button cập nhật và gắn hàm updateSinhVien
+// function updateSinhVien() {
+//   //Thực hiện xử lý dữ lijeu từ form  (coi lại xử lý thêm Sinh viên) => nhìn thửu thêm sinh viên và update có gì giống nhau? ++> có thể tách hàm không?
+//   // Tìm kiếm vị trí của phàn tử  đang cần chỉnh sửa trong mảng ==> findINdex
+//   //a
+//   //arrSinhVien[index]=newSinhVien
+//   //chạy lại render và đồng bộ dữ liệu với localStorage
+//   //Cho phép Input mã SV được thực hiện nhập dữ liệu
+
+//   let sinhvien = getValueSinhVien();
+//   let index = arrSinhVien.findIndex((item, index) => {
+//     //Object
+//     return item.txtMaSV == sinhvien.masv;
+//   });
+//   if (index != -1) {
+//     arrSinhVien[index] = sinhvien;
+//     renderArrSinhVien();
+//     saveLocalStorage();
+//   }
+
+// }
+// KhAI
+function updateSinhVien(event) {
+  event.preventDefault();
+
+  // thực hiện xử lí lấy dữ liệu từ form (coi lại xử lí thêm sinh viên) ==> nhìn thử thêm sinh viên và update có gì giống nhau ? ==> có thể tách hàm không
+  let sinhVien = getValueSinhVien();
+  // tìm kiếm vị trí của phần tử đang cần chỉnh sửa trong mảng ==> findIndex
+  let index = arrSinhVien.findIndex((item, index) => {
+    return item.txtMaSV == sinhVien.txtMaSV;
+  });
+  if (index != -1) {
+    arrSinhVien[index] = sinhVien;
+  }
+  // arrSinhVien[index] = newSinhVien
+  // chạy lại render và động bộ dữ liệu với localStorage
+  renderArrSinhVien();
+  saveLocalStorage();
+  formSV.reset();
+  document.getElementById("txtMaSV").readOnly = false;
+  // cho phép input mã SV được thực hiện nhập dữ liệu
+}
+// Xử lý khi hàm caaf truyền tham số
+// document.querySelector(".btn-info").onsubmit = function (event) {
+//   event.preventDefault();
+//   updateSinhVien(masv);
+// }
+document.querySelector(".btn-info").onclick = updateSinhVien;
+
 
 //các phương thức tương tác với : localStorate
 // Phương thức thêm dữ liệu vào localStogate
